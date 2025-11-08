@@ -169,3 +169,36 @@ h1, h2, h3, h4, h5, h6, pre {
   min-height: 100vh;
   padding: 30px;
 }
+
+
+.video-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.video-container video {
+    width: 60%;
+    max-width: 800px;
+    border-radius: 10px;
+    border: 3px solid #eee;
+}
+
+.explicacion-item {
+    margin-bottom: 40px;
+}
+
+.explicacion-item img {
+    width: 100%;
+    max-width: 650px;
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 6px;
+    border: 2px solid #ddd;
+}
+
+.explicacion-item p {
+    text-align: justify;
+    padding: 0 10px;
+}

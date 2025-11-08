@@ -204,6 +204,71 @@
                         </div>
                     </div>
 
+                       <!-- ========================================= -->
+                        <!-- PARTE 2 - EJEMPLO DEL VIDEO + EXPLICACIÓN -->
+                        <!-- ========================================= -->
+
+                        <div>
+                            <!-- Sección 2 -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h4 class="m-0 fw-bold text-primary">2) Ejemplo tomado del video</h4>
+                                </div>
+
+                                <div class="card-body">
+
+                                    <!-- VIDEO CENTRADO -->
+                                    <div class="video-container">
+                                        <video controls>
+                                            <source src="img/video_scrollspy.mp4" type="video/mp4">
+                                            Tu navegador no soporta la reproducción de video.
+                                        </video>
+                                    </div>
+
+                                    <hr>
+
+                                    <h4 class="fw-bold mb-3">Explicación del código principal (capturas del video)</h4>
+
+                                    <!-- 1 -->
+                                    <div class="explicacion-item">
+                                        <img src="img/parte2-body.png" alt="Activación Scrollspy">
+                                        <p><strong>1) Activación del Scrollspy:</strong> En la etiqueta 
+                                        <code>&lt;body&gt;</code> se utilizan los atributos <code>data-spy="scroll"</code>, 
+                                        <code>data-target="#scrollspy"</code> y <code>data-offset="1"</code> para vincular el desplazamiento 
+                                        de la página con la barra de navegación.</p>
+                                    </div>
+
+                                    <!-- 2 -->
+                                    <div class="explicacion-item">
+                                        <img src="img/parte2-navbar.png" alt="Navbar Scrollspy">
+                                        <p><strong>2) Barra de navegación:</strong> Se crea una barra fija con 
+                                        <code>&lt;nav id="scrollspy"&gt;</code>. El <code>id</code> es importante porque será el objetivo 
+                                        que Scrollspy actualizará para resaltar el enlace activo.</p>
+                                    </div>
+
+                                    <!-- 3 -->
+                                    <div class="explicacion-item">
+                                        <img src="img/parte2-items.png" alt="Enlaces del menú">
+                                        <p><strong>3) Enlaces del menú:</strong> Los enlaces de navegación usan 
+                                        <code>&lt;a href="#seccion"&gt;</code>. Scrollspy se encarga de agregar la clase 
+                                        <code>.active</code> automáticamente al enlace que coincide con la sección visible.</p>
+                                    </div>
+
+                                    <!-- 4 -->
+                                    <div class="explicacion-item">
+                                        <img src="img/parte2-secciones.png" alt="Secciones con ID">
+                                        <p><strong>4) Secciones del contenido:</strong> Cada sección debe tener un 
+                                        <code>id</code> correspondiente a los enlaces del menú. Al desplazarse la página, 
+                                        Scrollspy detecta qué sección está en pantalla y resalta el enlace asociado.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
                 </div>
             </div>
         </div>
