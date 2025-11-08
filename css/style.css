@@ -1,0 +1,135 @@
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+.rounded, .rounded-circle, .rounded-pill, .card, .dropdown-menu, .form-control, .btn, .sidebar, .bg-white, .sticky-footer {
+    border-radius: 0 !important;
+}
+
+.shadow, .shadow-sm, .shadow-lg, .topbar {
+    box-shadow: none !important;
+}
+
+.btn, .sidebar .nav-item .nav-link, .sidebar .sidebar-brand, 
+h1, h2, h3, h4, h5, h6, pre {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.bg-gradient-primary {
+    background-color: #000 !important;
+    background-image: none !important;
+}
+
+.sidebar-dark .nav-item .nav-link {
+    color: #ccc; 
+}
+.sidebar-dark .nav-item.active .nav-link {
+    color: #fff;
+    font-weight: 700;
+    background-color: #333; 
+}
+.sidebar-dark .sidebar-brand {
+     color: #fff;
+}
+.sidebar-dark .sidebar-divider {
+    border-top: 1px solid #333;
+}
+
+.btn-primary {
+     background-color: #000 !important;
+     border-color: #000 !important;
+     color: #FFF !important;
+}
+.btn-primary:hover {
+     background-color: #333 !important;
+     border-color: #333 !important;
+}
+
+.navbar-center, .navbar-center .navbar-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000 !important; 
+    line-height: 4.375rem; 
+    padding-top: 2px;
+    font-family: 'Roboto Mono', monospace; 
+}
+
+.content-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: 1px solid #000; 
+}
+
+.content-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25) !important; 
+}
+
+.content-card .card-title,
+.content-card h2,
+.content-card h5 { 
+    color: #4e73df;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif; 
+}
+
+.content-card ul {
+    list-style: none; 
+    padding-left: 10px;
+}
+
+.content-card ul li {
+    position: relative;
+    padding-left: 30px; 
+    margin-bottom: 0.75rem; 
+    font-size: 1rem;
+    color: #000; 
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700; 
+}
+
+.content-card ul li::before {
+    content: '\f00c'; 
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: #000; 
+}
+
+.topbar .nav-item .nav-link {
+    color: #000; 
+}
+.topbar .nav-item .nav-link .small {
+    color: #000 !important; 
+    font-weight: 700; 
+}
+.topbar .nav-item .nav-link:hover,
+.topbar .nav-item .nav-link:hover .small {
+    color: #5a5a5a; 
+}
+
+.container-fluid .text-center .h1 {
+    font-family: 'Roboto Mono', monospace !important;
+    color: #000000 !important; 
+}
+.container-fluid .text-center .lead {
+    color: #858796; 
+}
+
+.container-fluid > h1.h3 {
+    text-align: center !important;
+    color: #000000 !important; 
+    font-family: 'Roboto Mono', monospace !important;
+    text-transform: uppercase;
+}
+
+.card-header h6 {
+    color: #000000 !important; 
+    font-weight: 700 !important;
+    font-family: 'Roboto Mono', monospace !important;
+}
