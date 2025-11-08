@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>EXAMEN PARCIAL 1 - Multimedia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/styles.css" rel="stylesheet">
+    
+
+</head>
+
+<body id="page-top">
+
+    <div id="wrapper">
+
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">PARTE I</div>
+            </a>
+
+            <hr class="sidebar-divider my-0">
+
+            <li class="nav-item">
+                <a class="nav-link" href="grupo1.html">
+                    <i class="fas fa-fw fa-th-large"></i>
+                    <span>Grid Sistem</span>
+                </a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="grupo2.html">
+                    <i class="fas fa-fw fa-square"></i>
+                    <span>Botones</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="grupo3.html">
+                    <i class="fas fa-fw fa-keyboard"></i>
+                    <span>Formulario</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="grupo4.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Tablas</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="grupo5.html">
+                    <i class="fas fa-fw fa-window-maximize"></i>
+                    <span>NavBar</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="grupo6.html">
+                    <i class="fas fa-fw fa-window-restore"></i>
+                    <span>Modal</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="grupo7.html">
+                    <i class="fas fa-fw fa-photo-video"></i>
+                    <span>Multimedia</span>
+                </a>
+            </li>
+
+        </ul>
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    
+                    <div class="navbar-center">
+                        EXAMEN PARCIAL 1
+                    </div>
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-home fa-fw"></i>
+                            </a>
+                        </li>
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline small">PARTES</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="index.html">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Parte I
+                                </a>
+                                <a class="dropdown-item" href="../PARTE2/index.html">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Parte II
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="container-fluid">
+                    <h1 class="h3 mb-4">Bootstrap 5 Multimedia Examples</h1>
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold">Example 1: Responsive Image</h6>
+                        </div>
+                        <div class="card-body">
+                            <pre><code>&lt;img src="https://picsum.photos/800/400?random=1" class="img-fluid" alt="Responsive image"&gt;</code></pre>
+                            <button class="btn btn-primary execute" data-code="example1">Ejecutar</button>
+                            <div id="example1" class="mt-4"></div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold">Example 2: Responsive Video</h6>
+                        </div>
+                        <div class="card-body">
+                            <pre><code>&lt;div class="ratio ratio-16x9"&gt;
+    &lt;iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+                            <button class="btn btn-primary execute" data-code="example2">Ejecutar</button>
+                            <div id="example2" class="mt-4"></div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold">Example 3: Audio Player</h6>
+                        </div>
+                        <div class="card-body">
+                            <pre><code>&lt;audio controls&gt;
+    &lt;source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;</code></pre>
+                            <button class="btn btn-primary execute" data-code="example3">Ejecutar</button>
+                            <div id="example3" class="mt-4"></div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold">Example 4: Carousel</h6>
+                        </div>
+                        <div class="card-body">
+                            <pre><code>&lt;div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"&gt;
+    ...
+    &lt;div class="carousel-inner"&gt;
+        &lt;div class="carousel-item active"&gt;
+            &lt;img src="https://picsum.photos/800/400?random=1" class="d-block w-100" alt="..."&gt;
+        &lt;/div&gt;
+        ...
+    &lt;/div&gt;
+    ...
+&lt;/div&gt;</code></pre>
+                            <button class="btn btn-primary execute" data-code="example4">Ejecutar</button>
+                            <div id="example4" class="mt-4"></div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold">Example 5: Embed PDF</h6>
+                        </div>
+                        <div class="card-body">
+                            <pre><code>&lt;div class="ratio ratio-4x3"&gt;
+    &lt;iframe src="https://pdfobject.com/pdf/sample.pdf" title="PDF document"&gt;&lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+                            <button class="btn btn-primary execute" data-code="example5">Ejecutar</button>
+                            <div id="example5" class="mt-4"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            // Botón "PARTES" funciona.
+
+            $(".execute").click(function () {
+                var example = $(this).data("code");
+                var code;
+                switch (example) {
+                    case "example1":
+                        code = `<img src="https://picsum.photos/800/400?random=1" class="img-fluid" alt="Responsive image">`;
+                        break;
+                    case "example2":
+                        code = `<div class="ratio ratio-16x9">
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen></iframe>
+</div>`;
+                        break;
+                    case "example3":
+                        code = `<audio controls>
+    <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>`;
+                        break;
+                    case "example4":
+                        code = `<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://picsum.photos/800/400?random=1" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="https://picsum.photos/800/400?random=2" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="https://picsum.photos/800/400?random=3" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>`;
+                        break;
+                    case "example5":
+                        // [CORRECCIÓN] Enlace PDF actualizado
+                        code = `<div class="ratio ratio-4x3">
+    <iframe src="https://pdfobject.com/pdf/sample.pdf" title="PDF document"></iframe>
+</div>`;
+                        break;
+                }
+                
+                // Inyecta el código en el div correspondiente
+                $("#" + example).html(code);
+
+                // [CORRECCIÓN] Si el código es el carrusel, lo inicializa manualmente
+                // y añade listeners de clic a los botones
+                if (example === "example4") {
+                    var carouselElement = document.querySelector('#carouselExampleIndicators');
+                    if (carouselElement) {
+                        // 1. Crea la instancia de BS5
+                        var myCarousel = new bootstrap.Carousel(carouselElement);
+                        
+                        // 2. Añade listeners manuales para los botones de flecha
+                        $(carouselElement).find('.carousel-control-prev').on('click', function () {
+                            myCarousel.prev();
+                        });
+                        $(carouselElement).find('.carousel-control-next').on('click', function () {
+                            myCarousel.next();
+                        });
+                        
+                        // 3. [CORRECCIÓN] Añade listeners manuales para los indicadores (los botones del centro)
+                        $(carouselElement).find('.carousel-indicators button').on('click', function () {
+                            var slideIndex = $(this).data('bs-slide-to');
+                            myCarousel.to(slideIndex);
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

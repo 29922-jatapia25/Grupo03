@@ -1,0 +1,194 @@
+/* --- 1. Overrides Globales --- */
+
+/* Fuente principal (de la plantilla original) */
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Forzar todos los bordes a ser rectos */
+.rounded, .rounded-circle, .rounded-pill, .card, .dropdown-menu, .form-control, .btn, .sidebar, .bg-white, .sticky-footer {
+    border-radius: 0 !important;
+}
+
+/* Eliminar todas las sombras predeterminadas */
+.shadow, .shadow-sm, .shadow-lg, .topbar {
+    box-shadow: none !important;
+}
+
+/* Forzar fuente brutalista en TODOS los títulos */
+.btn, .sidebar .nav-item .nav-link, .sidebar .sidebar-brand, 
+h1, h2, h3, h4, h5, h6, pre {
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* --- 2. Forzar Barra Lateral (Sidebar) --- */
+.bg-gradient-primary {
+    background-color: #000 !important;
+    background-image: none !important;
+}
+
+.sidebar-dark .nav-item .nav-link {
+    color: #ccc; 
+}
+.sidebar-dark .nav-item.active .nav-link {
+    color: #fff;
+    font-weight: 700;
+    background-color: #333; 
+}
+.sidebar-dark .sidebar-brand {
+     color: #fff;
+}
+.sidebar-dark .sidebar-divider {
+    border-top: 1px solid #333;
+}
+
+/* --- 3. Forzar Botones (Brutalista) --- */
+.btn {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.btn-primary {
+     background-color: #000 !important;
+     border-color: #000 !important;
+     color: #FFF !important;
+}
+.btn-primary:hover {
+     background-color: #333 !important;
+     border-color: #333 !important;
+}
+
+
+/* --- 4. Estilos de Contenido (de Guía jQuery) --- */
+
+/* Título centrado en Topbar */
+.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000;
+    line-height: 4.375rem; 
+    padding-top: 2px;
+    font-family: 'Roboto Mono', monospace; 
+}
+
+/* Tarjetas de Contenido */
+.content-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: 1px solid #000; 
+}
+
+.content-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25) !important; 
+}
+
+/* Títulos de contenido Azules y con fuente de máquina */
+.content-card .card-title,
+.content-card h2 {
+    color: #4e73df; /* Azul primario del template */
+    font-weight: 700;
+    font-family: 'Roboto Mono', monospace; 
+}
+
+/* Listas de características (como en foto jQuery) */
+.content-card ul {
+    list-style: none; 
+    padding-left: 10px;
+}
+
+.content-card ul li {
+    position: relative;
+    padding-left: 30px; 
+    margin-bottom: 0.75rem; 
+    font-size: 1rem;
+    color: #000; 
+    font-family: 'Nunito', sans-serif; 
+    font-weight: 700; /* Texto en negrita */
+}
+
+.content-card ul li::before {
+    content: '\f00c'; 
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900; 
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: #000; 
+}
+
+/* --- 5. Iconos Topbar (Casita y Partes) --- */
+.topbar .nav-item .nav-link {
+    color: #000; /* Color negro para la casita */
+}
+.topbar .nav-item .nav-link .small {
+    color: #000 !important; /* Forzar color negro para "PARTES" */
+    font-weight: 700; 
+}
+.topbar .nav-item .nav-link:hover,
+.topbar .nav-item .nav-link:hover .small {
+    color: #5a5a5a; /* Un gris oscuro al pasar el mouse */
+}
+
+/* --- 6. Títulos H1 (index) --- */
+.container-fluid .text-center .h1 {
+    font-family: 'Roboto Mono', monospace !important;
+    color: #000000 !important; /* Negro puro */
+}
+.container-fluid .text-center .lead {
+    color: #858796; /* El gris de la plantilla, como en la foto de jQuery */
+}
+
+/* --- 7. [NUEVO] Títulos de Página de Módulo (grupos) --- */
+.container-fluid > h1.h3 {
+    text-align: center !important;
+    color: #000000 !important; /* Negro puro */
+    font-family: 'Roboto Mono', monospace !important;
+    text-transform: uppercase;
+}
+
+/* --- 8. [NUEVO] Títulos de Tarjeta de Módulo (Examples) --- */
+.card-header h6 {
+    color: #000000 !important; /* Negro puro */
+    font-weight: 700 !important;
+    font-family: 'Roboto Mono', monospace !important;
+}
+
+
+
+/* ==== BARRA LATERAL FIJA ==== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1030;
+}
+
+#content-wrapper {
+  margin-left: 225px; /* coincide con el ancho del sidebar */
+}
+
+/* ==== BARRA SUPERIOR FIJA ==== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 225px; /* deja espacio al sidebar */
+  right: 0;
+  z-index: 1020;
+}
+
+/* ==== CONTENIDO AJUSTADO ==== */
+#content {
+  padding-top: 70px; /* evita que el contenido quede oculto bajo el topbar */
+}
+
+/* Opcional: fondo para visualizar mejor la zona de contenido */
+.container-fluid {
+  background-color: #f8f9fc;
+  min-height: 100vh;
+  padding: 30px;
+}

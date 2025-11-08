@@ -1,149 +1,236 @@
-body {
-    font-family: 'Nunito', sans-serif;
+/********** Template CSS Modificado - Estilo Brutalista Minimalista **********/
+body{
+    background-color: #FFFFFF; /* Fondo blanco liso */
+    color: #000000;
+    font-family: 'Roboto Mono', monospace; /* Nueva tipografía */
+    margin-top: 0;
+    background-image: none; /* Sin imagen de fondo */
 }
 
-.rounded, .rounded-circle, .rounded-pill, .card, .dropdown-menu, .form-control, .btn, .sidebar, .bg-white, .sticky-footer {
-    border-radius: 0 !important;
+:root {
+    --primary: #000000; /* Negro */
+    --secondary: #DDDDDD; /* Gris claro */
+    --light: #FFFFFF; /* Blanco */
+    --dark: #000000; /* Negro */
 }
 
-.shadow, .shadow-sm, .shadow-lg, .topbar {
-    box-shadow: none !important;
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
 }
 
-.btn, .sidebar .nav-item .nav-link, .sidebar .sidebar-brand, 
-h1, h2, h3, h4, h5, h6, pre {
-    font-family: 'Roboto Mono', monospace;
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
 }
 
-.bg-gradient-primary {
-    background-color: #000 !important;
-    background-image: none !important;
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+    background-color: var(--dark);
+    color: var(--light);
+    border-radius: 0;
 }
 
-.sidebar-dark .nav-item .nav-link {
-    color: #ccc; 
-}
-.sidebar-dark .nav-item.active .nav-link {
-    color: #fff;
-    font-weight: 700;
-    background-color: #333; 
-}
-.sidebar-dark .sidebar-brand {
-     color: #fff;
-}
-.sidebar-dark .sidebar-divider {
-    border-top: 1px solid #333;
-}
 
-.btn-primary {
-     background-color: #000 !important;
-     border-color: #000 !important;
-     color: #FFF !important;
-}
-.btn-primary:hover {
-     background-color: #333 !important;
-     border-color: #333 !important;
-}
-
-.navbar-center, .navbar-center .navbar-text {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #000 !important; 
-    line-height: 4.375rem; 
-    padding-top: 2px;
-    font-family: 'Roboto Mono', monospace; 
-}
-
-.content-card {
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    border: 1px solid #000; 
-}
-
-.content-card:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25) !important; 
-}
-
-.content-card .card-title,
-.content-card h2,
-.content-card h5 { 
-    color: #4e73df;
-    font-weight: 700;
-    font-family: 'Nunito', sans-serif; 
-}
-
-.content-card ul {
-    list-style: none; 
-    padding-left: 10px;
-}
-
-.content-card ul li {
-    position: relative;
-    padding-left: 30px; 
-    margin-bottom: 0.75rem; 
-    font-size: 1rem;
-    color: #000; 
-    font-family: 'Nunito', sans-serif;
-    font-weight: 700; 
-}
-
-.content-card ul li::before {
-    content: '\f00c'; 
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    position: absolute;
-    left: 0;
-    top: 4px;
-    color: #000; 
-}
-
-.topbar .nav-item .nav-link {
-    color: #000; 
-}
-.topbar .nav-item .nav-link .small {
-    color: #000 !important; 
-    font-weight: 700; 
-}
-.topbar .nav-item .nav-link:hover,
-.topbar .nav-item .nav-link:hover .small {
-    color: #5a5a5a; 
-}
-
-.container-fluid .text-center .h1 {
-    font-family: 'Roboto Mono', monospace !important;
-    color: #000000 !important; 
-}
-.container-fluid .text-center .lead {
-    color: #858796; 
-}
-
-.container-fluid > h1.h3 {
-    text-align: center !important;
-    color: #000000 !important; 
-    font-family: 'Roboto Mono', monospace !important;
-    text-transform: uppercase;
-}
-
-.card-header h6 {
-    color: #000000 !important; 
+/*** Heading ***/
+h1,
+h2,
+h3,
+.fw-bold {
     font-weight: 700 !important;
-    font-family: 'Roboto Mono', monospace !important;
-}
-.card-body h2 {
-  margin-top: 1rem;
-  color: #52698b;
-  text-transform: uppercase;
 }
 
-.card-body p {
-  text-align: justify;
-  line-height: 1.6;
+h4,
+h5,
+h6,
+.fw-medium {
+    font-weight: 500 !important;
 }
 
-.card-body ul {
-  margin-left: 1rem;
+
+/*** Button ***/
+.btn {
+    font-weight: 700; /* Más grueso */
+    transition: .3s;
+    font-family: 'Roboto Mono', monospace; /* Misma fuente */
+    border-radius: 0 !important; /* Bordes rectos - Brutalista */
+    padding: 12px 24px;
+    text-transform: uppercase; /* Mayúsculas */
+}
+
+/* Estilo para los botones principales */
+.btn-outline-light {
+    color: var(--dark);
+    border: 2px solid var(--dark);
+    background-color: transparent;
+}
+
+.btn-outline-light:hover {
+    color: var(--light);
+    background-color: var(--dark);
+    border-color: var(--dark);
+}
+
+/* Estilo para el botón pequeño superior */
+.btn.border.rounded-pill {
+    border-radius: 0 !important; /* Quitar borde redondeado */
+    border: 1px solid var(--dark) !important;
+    color: var(--dark) !important; /* Sobreescribir text-white */
+    padding: 5px 10px;
+    font-size: 12px;
+}
+.btn.border.rounded-pill:hover {
+    background-color: var(--dark);
+    color: var(--light) !important;
+}
+
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 0; /* Bordes rectos */
+}
+
+
+/*** Navbar ***/
+.sticky-top {
+    top: -150px;
+    transition: .5s;
+}
+
+/* Estado de la Navbar al hacer scroll (definido en main.js) */
+.sticky-top.bg-primary {
+    background-color: var(--light) !important; /* Fondo blanco */
+    box-shadow: none !important; /* Sin sombra */
+    border-bottom: 2px solid var(--dark); /* Borde inferior */
+}
+
+.navbar {
+    padding: 11px 0 !important;
+    height: 75px;
+    background-color: transparent; /* Fondo transparente inicial */
+}
+
+/* Título "Grupo #2" */
+.navbar .navbar-brand h1 {
+    color: var(--dark) !important; /* Sobreescribir text-white */
+}
+
+.navbar .navbar-nav .nav-link {
+    margin-right: 35px;
+    padding: 0;
+    color: var(--dark); /* Color de texto oscuro */
+    outline: none;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--dark);
+    opacity: 0.6; /* Simple efecto hover */
+}
+
+/* Icono Home en Navbar */
+.navbar .btn.text-white {
+    color: var(--dark) !important; /* Sobreescribir text-white */
+}
+.navbar .btn.text-white:hover {
+    opacity: 0.6;
+}
+
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav {
+        padding: 0 15px;
+        background: var(--light); /* Fondo blanco en móvil */
+        border: 2px solid var(--dark);
+    }
+
+    .navbar .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+        color: var(--dark);
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: 2px solid var(--dark); /* Borde en menú */
+        border-radius: 0;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+
+/*** Hero Header ***/
+.hero-header {
+    margin-top: 0; /* Quitado el margen negativo */
+    background: none; /* Sin imagen de fondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh; /* Centrado vertical */
+    padding-top: 0; /* Sobreescribir pt-5 */
+}
+
+/* Contenedor del texto y botones */
+.hero-header .row .pt-5 {
+    width: 100%;
+    text-align: center !important; /* Forzar centrado */
+    padding-top: 0 !important;
+}
+
+/* Colores de texto en Hero */
+.hero-header .display-4,
+.hero-header p {
+    color: var(--dark) !important; /* Sobreescribir text-white */
 }

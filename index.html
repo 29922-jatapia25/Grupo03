@@ -1,222 +1,86 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>EXAMEN PARCIAL 1</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-    <title>EXAMEN PARCIAL 1 - Scrollspy</title>
+    <link href="img/favicon.ico" rel="icon">
 
-    <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
 
-    <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <link href="css/style.css" rel="stylesheet">
-
 </head>
 
-<body id="page-top">
-    <div id="wrapper">
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../../index.html">
-                <div class="sidebar-brand-icon">
-                    <i class="fas fa-users"></i>
+<body>
+    
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                <a href="index.html" class="navbar-brand">
+                    <h1>NRC<span class_o="text-white"></span> 29922</h1>
+                </a>
+               
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        
+                       
+                        <button  type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#searchModal">
+                            <i class="fa fa-home"></i>
+                        </button>
+                        
                 </div>
-                <div class="sidebar-brand-text mx-3">PARTE II</div>
-            </a>
-
-            <hr class="sidebar-divider my-0">
-
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo01/index.html">
-                    <i class="fas fa-fw fa-comment-alt"></i>
-                    <span>Tooltip and Popover</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo02/index.html">
-                    <i class="fas fa-fw fa-sliders-h"></i>
-                    <span>Slider</span>
-                </a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-crosshairs"></i>
-                    <span>Scrollspy</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo04/index.html">
-                    <i class="fas fa-fw fa-stream"></i>
-                    <span>Megamenu</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo05/index.html">
-                    <i class="fas fa-fw fa-tasks"></i>
-                    <span>Progress Bar</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo06/index.html">
-                    <i class="fas fa-fw fa-list-ul"></i>
-                    <span>List</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo07/index.html">
-                    <i class="fas fa-fw fa-columns"></i>
-                    <span>Panel</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo08/index.html">
-                    <i class="fas fa-fw fa-certificate"></i>
-                    <span>Badge</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo09/index.html">
-                    <i class="fas fa-fw fa-image"></i>
-                    <span>Thumbnails and Media</span>
-                </a>
-            </li>
-
-        </ul>
-        <div id="content-wrapper" class="d-flex flex-column">
-            <div id="content">
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-                    <div class="navbar-center">
-                        EXAMEN PARCIAL 1
-                    </div>
-
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../../../index.html" title="Inicio">
-                                <i class="fas fa-home fa-fw"></i>
-                            </a>
-                        </li>
-                        <div class="topbar-divider d-none d-sm-block"></div>
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline small">PARTES</span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="../../../PARTE1/index.html">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Parte I
-                                </a>
-                                <a class="dropdown-item" href="../../index.html">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Parte II
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-
-                <div class="container-fluid">
-                    <h1 class="h3 mb-4">Scrollspy - Grupo 03</h1>
-
-
-                    <div class="row">
-                        <div class="col-lg-12 mb-4">
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h5 class="m-0 font-weight-bold text-primary">
-                                        Explicación profunda del componente Scrollspy (Bootstrap 5)
-                                    </h5>
-                                </div>
-                                <div class="card-body">
-
-                                    <h2 class="text-secondary fw-bold"> Descripción general</h2>
-                                    <p>
-                                        El componente <strong>Scrollspy</strong> de Bootstrap es una herramienta
-                                        dinámica que
-                                        <strong>sincroniza el desplazamiento del contenido</strong> (<em>scroll</em>)
-                                        con los <strong>elementos de navegación</strong> de una página web.
-                                        Su función principal es <strong>resaltar automáticamente el enlace
-                                            activo</strong>
-                                        en el menú según la sección visible del contenido,
-                                        brindando al usuario una referencia clara sobre
-                                        <strong>en qué parte del sitio se encuentra</strong>.
-                                    </p>
-
-                                    <hr>
-
-                                    <h2 class="text-secondary fw-bold"> Funcionamiento general</h2>
-                                    <p>
-                                        Cuando el usuario se desplaza por una página extensa,
-                                        Scrollspy “espía” el movimiento del desplazamiento y
-                                        detecta qué sección está visible en ese momento.
-                                        Bootstrap utiliza JavaScript interno para aplicar
-                                        automáticamente la clase <code>.active</code> al enlace del menú
-                                        correspondiente y eliminarla de los demás,
-                                        generando una experiencia de navegación fluida y visualmente atractiva.
-                                    </p>
-
-                                    <p>
-                                        Este proceso ocurre en tiempo real mientras el usuario navega hacia arriba o
-                                        hacia abajo,
-                                        comparando la posición del <em>scroll</em> con las etiquetas <code>id</code>
-                                        que definen cada sección.
-                                        De esta forma, el sistema identifica la parte visible del documento y
-                                        actualiza el estado del menú de navegación en consecuencia.
-                                    </p>
-
-                                    <hr>
-
-                                    <h2 class="text-secondary fw-bold">Estructura básica y atributos principales</h2>
-                                    <p>
-                                        Para implementar Scrollspy correctamente se deben configurar ciertos
-                                        <strong>atributos HTML</strong> que permiten vincular el área con desplazamiento
-                                        y el menú correspondiente:
-                                    </p>
-                                    <ul>
-                                        <li><code>data-bs-spy="scroll"</code>: activa el comportamiento Scrollspy.</li>
-                                        <li><code>data-bs-target="#id-del-menu"</code>: indica el menú que se
-                                            actualizará automáticamente.</li>
-                                        <li><code>data-bs-offset="valor"</code>: establece el margen superior (en
-                                            píxeles) para activar un enlace.</li>
-                                        <li><code>tabindex="0"</code>: permite que el contenedor reciba eventos de
-                                            desplazamiento.</li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid pt-5  hero-header mb-5">
+        <div class="container pt-5">
+            <div class="row g-5 pt-5">
+                <div class="pt-5 align-self-center text-center mb-lg-5">
+                    <a href="index.html" class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated slideInRight">
+                        APLICACIÓN DE TECNOLOGIAS WEB
+                    </a>                    
+                    <h1 class="display-4 text-white mb-4 animated slideInRight">EXAMEN I PARCIAL</h1>
+                    <p class="text-white mb-4 animated slideInRight">Portal Web basado en BootStrap 5, incluyendo ejemplos con sus respectivos resultados.</p>
+                    <a href="PARTE1/index.html" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">PARTE I</a>
+                    <a href="PARTE2/index.html" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">PARTE II</a>
+                </div>
+                <div class="col-lg-6 align-self-end text-center text-lg-end">
+                    <img class="img-fluid" src="" alt="">
+                   
                 </div>
             </div>
         </div>
-
-        <script src="../../vendor/jquery/jquery.min.js"></script>
-        <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
-        <script src="../../js/sb-admin-2.min.js"></script>
-
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-
-        <script src="js/main.js"></script>
-
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/lib/wow/wow.min.js"></script>
+    <script src="assets/lib/easing/easing.min.js"></script>
+    <script src="assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="assets/lib/counterup/counterup.min.js"></script>
+    <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
