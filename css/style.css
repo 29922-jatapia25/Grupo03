@@ -133,3 +133,17 @@ h1, h2, h3, h4, h5, h6, pre {
     font-weight: 700 !important;
     font-family: 'Roboto Mono', monospace !important;
 }
+.card-body h2 {
+  margin-top: 1rem;
+  color: #52698b;
+  text-transform: uppercase;
+}
+
+.card-body p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.card-body ul {
+  margin-left: 1rem;
+}
