@@ -11,14 +11,16 @@
     <title>EXAMEN PARCIAL 1 - Scrollspy</title>
 
     <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
 
     <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
-    
+
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <link href="css/style.css" rel="stylesheet">
 
 </head>
@@ -35,7 +37,7 @@
             </a>
 
             <hr class="sidebar-divider my-0">
-            
+
             <li class="nav-item">
                 <a class="nav-link" href="../Grupo01/index.html">
                     <i class="fas fa-fw fa-comment-alt"></i>
@@ -98,7 +100,7 @@
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-                    
+
                     <div class="navbar-center">
                         EXAMEN PARCIAL 1
                     </div>
@@ -132,21 +134,89 @@
 
                 <div class="container-fluid">
                     <h1 class="h3 mb-4">Scrollspy - Grupo 03</h1>
-                    
+
+
+                    <div class="row">
+                        <div class="col-lg-12 mb-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h5 class="m-0 font-weight-bold text-primary">
+                                        Explicación profunda del componente Scrollspy (Bootstrap 5)
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+
+                                    <h2 class="text-secondary fw-bold"> Descripción general</h2>
+                                    <p>
+                                        El componente <strong>Scrollspy</strong> de Bootstrap es una herramienta
+                                        dinámica que
+                                        <strong>sincroniza el desplazamiento del contenido</strong> (<em>scroll</em>)
+                                        con los <strong>elementos de navegación</strong> de una página web.
+                                        Su función principal es <strong>resaltar automáticamente el enlace
+                                            activo</strong>
+                                        en el menú según la sección visible del contenido,
+                                        brindando al usuario una referencia clara sobre
+                                        <strong>en qué parte del sitio se encuentra</strong>.
+                                    </p>
+
+                                    <hr>
+
+                                    <h2 class="text-secondary fw-bold"> Funcionamiento general</h2>
+                                    <p>
+                                        Cuando el usuario se desplaza por una página extensa,
+                                        Scrollspy “espía” el movimiento del desplazamiento y
+                                        detecta qué sección está visible en ese momento.
+                                        Bootstrap utiliza JavaScript interno para aplicar
+                                        automáticamente la clase <code>.active</code> al enlace del menú
+                                        correspondiente y eliminarla de los demás,
+                                        generando una experiencia de navegación fluida y visualmente atractiva.
+                                    </p>
+
+                                    <p>
+                                        Este proceso ocurre en tiempo real mientras el usuario navega hacia arriba o
+                                        hacia abajo,
+                                        comparando la posición del <em>scroll</em> con las etiquetas <code>id</code>
+                                        que definen cada sección.
+                                        De esta forma, el sistema identifica la parte visible del documento y
+                                        actualiza el estado del menú de navegación en consecuencia.
+                                    </p>
+
+                                    <hr>
+
+                                    <h2 class="text-secondary fw-bold">Estructura básica y atributos principales</h2>
+                                    <p>
+                                        Para implementar Scrollspy correctamente se deben configurar ciertos
+                                        <strong>atributos HTML</strong> que permiten vincular el área con desplazamiento
+                                        y el menú correspondiente:
+                                    </p>
+                                    <ul>
+                                        <li><code>data-bs-spy="scroll"</code>: activa el comportamiento Scrollspy.</li>
+                                        <li><code>data-bs-target="#id-del-menu"</code>: indica el menú que se
+                                            actualizará automáticamente.</li>
+                                        <li><code>data-bs-offset="valor"</code>: establece el margen superior (en
+                                            píxeles) para activar un enlace.</li>
+                                        <li><code>tabindex="0"</code>: permite que el contenedor reciba eventos de
+                                            desplazamiento.</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                </div>
             </div>
         </div>
-    </div>
 
-    <script src="../../vendor/jquery/jquery.min.js"></script>
-    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="../../js/sb-admin-2.min.js"></script>
-    
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-    
-    <script src="js/main.js"></script>
-    
+        <script src="../../vendor/jquery/jquery.min.js"></script>
+        <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="../../js/sb-admin-2.min.js"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+        <script src="js/main.js"></script>
+
 </body>
 
 </html>
