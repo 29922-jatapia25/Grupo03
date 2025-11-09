@@ -263,3 +263,15 @@ pre,
   border: 1px solid #444 !important;
 }
 
+
+.code-dark {
+  background-color: #000 !important;
+  color: #f8f8f2 !important;
+  padding: 1rem;
+  border-radius: 6px;
+  white-space: pre;
+  overflow: auto;
+  max-height: 500px;
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  font-size: 14px;
+}
