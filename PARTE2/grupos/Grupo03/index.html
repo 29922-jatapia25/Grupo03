@@ -274,41 +274,38 @@
 
                         <div class="card-body">
 
-                        <pre class="bg-light p-3 border rounded" style="white-space: pre; font-family: 'Roboto Mono', monospace; font-size: 14px;">
+                        <pre id="code-scrollspy" class="bg-light p-3 border rounded" style="font-family: 'Roboto Mono', monospace; font-size: 14px;">
+                            &lt;!-- Activación de Scrollspy en el &lt;body&gt; --&gt;
+                            &lt;body data-bs-spy="scroll"
+                                data-bs-target="#scrollspy-topbar-menu"
+                                data-bs-offset="90"
+                                tabindex="0"&gt;
 
-                        &lt;!-- Activación de Scrollspy en el &lt;body&gt; --&gt;
-                        &lt;body data-bs-spy="scroll"
-                            data-bs-target="#scrollspy-topbar-menu"
-                            data-bs-offset="90"
-                            tabindex="0"&gt;
+                                &lt;!-- Menú de navegación que Scrollspy actualizará --&gt;
+                                &lt;nav class="navbar navbar-light bg-light fixed-top"&gt;
+                                    &lt;ul id="scrollspy-topbar-menu" class="navbar-nav ms-auto flex-row gap-3"&gt;
+                                        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#parte1"&gt;1) Teoría&lt;/a&gt;&lt;/li&gt;
+                                        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#parte2"&gt;2) Ejemplo&lt;/a&gt;&lt;/li&gt;
+                                        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#parte3"&gt;3) Ejecución&lt;/a&gt;&lt;/li&gt;
+                                        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#parte4"&gt;4) Ejercicio&lt;/a&gt;&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                &lt;/nav&gt;
 
-                        &lt;!-- Menú de navegación que Scrollspy actualizará --&gt;
-                        &lt;nav class="navbar navbar-light bg-light fixed-top"&gt;
-                            &lt;ul id="scrollspy-topbar-menu" class="navbar-nav ms-auto flex-row gap-3"&gt;
-                            &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#parte1"&gt;1) Teoría&lt;/a&gt;&lt;/li&gt;
-                            &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#parte2"&gt;2) Ejemplo&lt;/a&gt;&lt;/li&gt;
-                            &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#parte3"&gt;3) Ejecución&lt;/a&gt;&lt;/li&gt;
-                            &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#parte4"&gt;4) Ejercicio&lt;/a&gt;&lt;/li&gt;
-                            &lt;/ul&gt;
-                        &lt;/nav&gt;
+                                &lt;!-- Secciones del contenido --&gt;
+                                &lt;section id="parte1"&gt;...&lt;/section&gt;
+                                &lt;section id="parte2"&gt;...&lt;/section&gt;
+                                &lt;section id="parte3"&gt;...&lt;/section&gt;
+                                &lt;section id="parte4"&gt;...&lt;/section&gt;
 
-                        &lt;!-- Secciones del contenido --&gt;
-                        &lt;section id="parte1"&gt;...&lt;/section&gt;
-                        &lt;section id="parte2"&gt;...&lt;/section&gt;
-                        &lt;section id="parte3"&gt;...&lt;/section&gt;
-                        &lt;section id="parte4"&gt;...&lt;/section&gt;
-
-                        &lt;/body&gt;
-
+                            &lt;/body&gt;
                         </pre>
+
+
 
                             <button id="btn-ejecutar-scrollspy" class="btn btn-primary mt-3">EJECUTAR</button>
 
                         </div>
                         </div>
-
-
-
 
                         <div class="card shadow mb-4" id="parte4">
 

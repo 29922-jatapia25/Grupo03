@@ -80,3 +80,28 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const pre = document.getElementById("code-scrollspy");
+  if (!pre) return;
+
+  // 1) Obtener texto real sin afectar entidades HTML (&lt;, &gt;)
+  let lines = pre.innerHTML.split("\n");
+
+  // 2) Borrar líneas vacías del principio y el final
+  while (lines.length && lines[0].trim() === "") lines.shift();
+  while (lines.length && lines[lines.length - 1].trim() === "") lines.pop();
+
+  // 3) Detectar indentación común mínima
+  let minIndent = Math.min(
+    ...lines
+      .filter(l => l.trim().length > 0)
+      .map(l => l.match(/^(\s*)/)[0].length)
+  );
+
+  // 4) Quitar esa indentación a todas las líneas
+  lines = lines.map(l => l.slice(minIndent));
+
+  // 5) Reemplazar el contenido sin dañarlo
+  pre.innerHTML = lines.join("\n");
+});

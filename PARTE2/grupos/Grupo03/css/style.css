@@ -228,3 +228,14 @@ h1, h2, h3, h4, h5, h6, pre {
 [id^="parte"] {
   scroll-margin-top: 90px; /* altura aprox. de tu topbar */
 }
+
+.code-plain {
+  background: #fff !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  white-space: pre !important;
+  text-align: left !important;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+}
