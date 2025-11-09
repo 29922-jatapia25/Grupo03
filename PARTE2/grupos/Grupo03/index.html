@@ -164,7 +164,7 @@
                                     <h2 class="text-secondary fw-bold"> Funcionamiento general</h2>
                                     <p>
                                         Cuando el usuario se desplaza por una página extensa,
-                                        Scrollspy “espía” el movimiento del desplazamiento y
+                                        Scrollspy "espía" el movimiento del desplazamiento y
                                         detecta qué sección está visible en ese momento.
                                         Bootstrap utiliza JavaScript interno para aplicar
                                         automáticamente la clase <code>.active</code> al enlace del menú
@@ -300,8 +300,6 @@
                             &lt;/body&gt;
                         </pre>
 
-
-
                             <button id="btn-ejecutar-scrollspy" class="btn btn-primary mt-3">EJECUTAR</button>
 
                         </div>
@@ -320,7 +318,91 @@
                             </div>
                         </div>
 
+                        </div>
 
+                        <!-- NUEVA SECCIÓN: EJEMPLO CON GRUPO DE LISTAS -->
+                        <h1 class="h3 mb-4" id="parte5" style="margin-top: 50px;">4) Ejemplo con grupo de listas</h1>
+
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h5 class="m-0 font-weight-bold text-primary">Scrollspy usando list-group en lugar de nav</h5>
+                            </div>
+
+                            <div class="card-body">
+
+                                <h3 style="color:#212529; font-weight:600; margin-top:25px;">Teoría</h3>
+                                <p style="text-align:justify;">
+                                    Scrollspy también puede implementarse usando el componente <code>.list-group</code> de Bootstrap, 
+                                    que ofrece un diseño limpio y segmentado. 
+                                    Cada elemento se activa automáticamente según el desplazamiento del contenido.
+                                </p>
+
+                                <h3 style="color:#212529; font-weight:600;">Ejecución del código</h3>
+                                <p>Pulsa <strong>Ejecutar</strong> para ver el Scrollspy con grupos de listas y desplazamiento dinámico.</p>
+
+                                <pre id="codeBox2" style="background-color:#212529;color:#f8f9fa;border-radius:8px;padding:15px;font-family:monospace;overflow-x:auto;user-select:none;">
+&lt;div class="row"&gt;
+  &lt;div class="col-md-4"&gt;
+    &lt;div id="list-example-demo" class="list-group shadow-sm"
+         style="background-color:#e9f0f8;border:1px solid #cdd8e4;border-radius:10px;"&gt;
+      &lt;a class="list-group-item list-group-item-action" href="#item-intro"
+         style="color:#003366;background-color:#e9f0f8;margin-bottom:6px;border-radius:6px;"&gt;Introducción&lt;/a&gt;
+      &lt;a class="list-group-item list-group-item-action" href="#item-func"
+         style="color:#003366;background-color:#e9f0f8;margin-bottom:6px;border-radius:6px;"&gt;Funcionamiento&lt;/a&gt;
+      &lt;a class="list-group-item list-group-item-action" href="#item-vent"
+         style="color:#003366;background-color:#e9f0f8;margin-bottom:6px;border-radius:6px;"&gt;Ventajas&lt;/a&gt;
+      &lt;a class="list-group-item list-group-item-action" href="#item-conc"
+         style="color:#003366;background-color:#e9f0f8;margin-bottom:6px;border-radius:6px;"&gt;Conclusión&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="col-md-8"&gt;
+    &lt;div id="scrollspy-demo" data-bs-spy="scroll" data-bs-target="#list-example-demo" data-bs-offset="0" tabindex="0"
+         style="position:relative;height:400px;overflow-y:scroll;scroll-behavior:smooth;
+                border:1px solid #dee2e6;border-radius:10px;background-color:#ffffff;padding:20px;"&gt;
+
+      &lt;h4 id="item-intro"&gt;Introducción&lt;/h4&gt;
+      &lt;p&gt;Scrollspy puede vincularse a listas para lograr una navegación clara y moderna. Es una forma elegante de mantener al usuario orientado sobre en qué sección se encuentra.&lt;/p&gt;
+      &lt;p&gt;Es perfecto para dashboards, reportes técnicos o páginas informativas extensas donde necesitas indicar la posición del usuario.&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+
+      &lt;h4 id="item-func"&gt;Funcionamiento&lt;/h4&gt;
+      &lt;p&gt;Cada enlace apunta a una sección del contenido. Bootstrap detecta cuál está visible en la ventana de desplazamiento y aplica la clase .active automáticamente.&lt;/p&gt;
+      &lt;p&gt;Así el usuario siempre sabe en qué parte del contenido se encuentra sin perder la orientación.&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+
+      &lt;h4 id="item-vent"&gt;Ventajas&lt;/h4&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Diseño limpio y segmentado para mejor visualización.&lt;/li&gt;
+        &lt;li&gt;No requiere código adicional complejo, solo atributos HTML.&lt;/li&gt;
+        &lt;li&gt;Se integra fácilmente en plantillas modernas de Bootstrap.&lt;/li&gt;
+        &lt;li&gt;Mejora la experiencia del usuario en páginas largas.&lt;/li&gt;
+        &lt;li&gt;Compatible con navegadores modernos.&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;p&gt;Además, mejora la comprensión visual del contenido y la orientación del lector en documentos extensos.&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+
+      &lt;h4 id="item-conc"&gt;Conclusión&lt;/h4&gt;
+      &lt;p&gt;Scrollspy con grupos de listas es una alternativa moderna y elegante, ideal para sitios interactivos o educativos.&lt;/p&gt;
+      &lt;p&gt;Su diseño adaptable y su simplicidad lo convierten en una herramienta excelente para mejorar la navegación en una sola página.&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+                                </pre>
+
+                                <div class="mt-3 d-flex gap-2">
+                                    <button id="runCode2" class="btn btn-success"><i class="bi bi-play-fill"></i> Ejecutar</button>
+                                    <button id="resetCode2" class="btn btn-outline-danger"><i class="bi bi-x-circle"></i> Resetear</button>
+                                </div>
+
+                                <div id="resultBox2" style="background-color:#fff;border:1px solid #dee2e6;border-radius:8px;padding:20px;margin-top:20px;"></div>
+
+                            </div>
                         </div>
 
                 </div>
@@ -335,6 +417,67 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 
         <script src="js/main.js"></script>
+
+        <!-- Scripts para el ejemplo con list-group -->
+        <script>
+            $(document).ready(function(){
+                // === Ejemplo con list-group ===
+                $("#runCode2").click(function(){
+                    const code=$("#codeBox2").text().replace(/&lt;/g,"<").replace(/&gt;/g,">");
+                    $("#resultBox2").html(code).hide().fadeIn(600);
+                    
+                    // Esperar a que el DOM se actualice completamente
+                    setTimeout(function(){
+                        // Buscar el contenedor de scroll
+                        const scrollContainer = document.querySelector('#resultBox2 #scrollspy-demo');
+                        
+                        if(scrollContainer){
+                            // Eliminar instancia anterior si existe
+                            const existingInstance = bootstrap.ScrollSpy.getInstance(scrollContainer);
+                            if(existingInstance) {
+                                existingInstance.dispose();
+                            }
+                            
+                            // Crear nueva instancia de ScrollSpy
+                            const scrollspy = new bootstrap.ScrollSpy(scrollContainer, {
+                                target: '#list-example-demo'
+                            });
+                        }
+                    }, 150);
+                });
+                
+                $("#resetCode2").click(function(){
+                    $("#resultBox2").fadeOut(400,function(){
+                        $(this).html("");
+                    });
+                });
+
+                // === Personaliza el color del enlace activo ===
+                document.addEventListener('activate.bs.scrollspy', function (event) {
+                    const resultBox = document.getElementById('resultBox2');
+                    
+                    // Solo aplicar si el evento está dentro de resultBox2
+                    if(resultBox && resultBox.contains(event.target)){
+                        // Resetear todos los items
+                        const allItems = resultBox.querySelectorAll('.list-group-item');
+                        allItems.forEach(el => {
+                            el.classList.remove('active');
+                            el.style.backgroundColor = '#e9f0f8';
+                            el.style.color = '#003366';
+                            el.style.fontWeight = 'normal';
+                            el.style.borderLeft = 'none';
+                        });
+                        
+                        // Resaltar el activo
+                        const activeItem = event.target;
+                        activeItem.style.backgroundColor = '#003366';
+                        activeItem.style.color = '#ffffff';
+                        activeItem.style.fontWeight = 'bold';
+                        activeItem.style.borderLeft = '4px solid #003366';
+                    }
+                });
+            });
+        </script>
 
 </body>
 
