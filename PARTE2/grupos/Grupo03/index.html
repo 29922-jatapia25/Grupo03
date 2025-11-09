@@ -204,77 +204,88 @@
                         </div>
                     </div>
 
-                        <!-- PARTE 2 - EJEMPLO DEL VIDEO + EXPLICACIÓN -->
-                        
-                        <div>
-                            <!-- Sección 2 -->
-                            <div class="card shadow mb-4" id="parte2">
-                                <div class="card-header py-3">
-                                    <h4 class="m-0 fw-bold text-primary">2) Ejemplo tomado del video</h4>
-                                </div>
+                    <!-- PARTE 2 - EJEMPLO DEL VIDEO + EXPLICACIÓN -->
 
-                                <div class="card-body">
-
-                                    <!-- VIDEO CENTRADO -->
-                                    <div class="video-container">
-                                        <video controls>
-                                            <source src="img/video_scrollspy.mp4" type="video/mp4">
-                                            Tu navegador no soporta la reproducción de video.
-                                        </video>
-                                    </div>
-
-                                    <hr>
-
-                                    <h4 class="fw-bold mb-3">Explicación del código principal (capturas del video)</h4>
-
-                                    <!-- 1 -->
-                                    <div class="explicacion-item">
-                                        <img src="img/parte2-body.png" alt="Activación Scrollspy">
-                                        <p><strong>1) Activación del Scrollspy:</strong> En la etiqueta 
-                                        <code>&lt;body&gt;</code> se utilizan los atributos <code>data-spy="scroll"</code>, 
-                                        <code>data-target="#scrollspy"</code> y <code>data-offset="1"</code> para vincular el desplazamiento 
-                                        de la página con la barra de navegación.</p>
-                                    </div>
-
-                                    <!-- 2 -->
-                                    <div class="explicacion-item">
-                                        <img src="img/parte2-navbar.png" alt="Navbar Scrollspy">
-                                        <p><strong>2) Barra de navegación:</strong> Se crea una barra fija con 
-                                        <code>&lt;nav id="scrollspy"&gt;</code>. El <code>id</code> es importante porque será el objetivo 
-                                        que Scrollspy actualizará para resaltar el enlace activo.</p>
-                                    </div>
-
-                                    <!-- 3 -->
-                                    <div class="explicacion-item">
-                                        <img src="img/parte2-items.png" alt="Enlaces del menú">
-                                        <p><strong>3) Enlaces del menú:</strong> Los enlaces de navegación usan 
-                                        <code>&lt;a href="#seccion"&gt;</code>. Scrollspy se encarga de agregar la clase 
-                                        <code>.active</code> automáticamente al enlace que coincide con la sección visible.</p>
-                                    </div>
-
-                                    <!-- 4 -->
-                                    <div class="explicacion-item">
-                                        <img src="img/parte2-secciones.png" alt="Secciones con ID">
-                                        <p><strong>4) Secciones del contenido:</strong> Cada sección debe tener un 
-                                        <code>id</code> correspondiente a los enlaces del menú. Al desplazarse la página, 
-                                        Scrollspy detecta qué sección está en pantalla y resalta el enlace asociado.</p>
-                                    </div>
-
-                                </div>
+                    <div>
+                        <!-- Sección 2 -->
+                        <div class="card shadow mb-4" id="parte2">
+                            <div class="card-header py-3">
+                                <h4 class="m-0 fw-bold text-primary">2) Ejemplo tomado del video</h4>
                             </div>
 
-                        </div>
-                   
-                        <h1 class="h3 mb-4" id="parte3">3) Ejecución del código</h1>
+                            <div class="card-body">
 
-                        <div class="card shadow mb-4">
+                                <!-- VIDEO CENTRADO -->
+                                <div class="video-container">
+                                    <video controls>
+                                        <source src="img/video_scrollspy.mp4" type="video/mp4">
+                                        Tu navegador no soporta la reproducción de video.
+                                    </video>
+                                </div>
+
+                                <hr>
+
+                                <h4 class="fw-bold mb-3">Explicación del código principal (capturas del video)</h4>
+
+                                <!-- 1 -->
+                                <div class="explicacion-item">
+                                    <img src="img/parte2-body.png" alt="Activación Scrollspy">
+                                    <p><strong>1) Activación del Scrollspy:</strong> En la etiqueta
+                                        <code>&lt;body&gt;</code> se utilizan los atributos
+                                        <code>data-spy="scroll"</code>,
+                                        <code>data-target="#scrollspy"</code> y <code>data-offset="1"</code> para
+                                        vincular el desplazamiento
+                                        de la página con la barra de navegación.
+                                    </p>
+                                </div>
+
+                                <!-- 2 -->
+                                <div class="explicacion-item">
+                                    <img src="img/parte2-navbar.png" alt="Navbar Scrollspy">
+                                    <p><strong>2) Barra de navegación:</strong> Se crea una barra fija con
+                                        <code>&lt;nav id="scrollspy"&gt;</code>. El <code>id</code> es importante porque
+                                        será el objetivo
+                                        que Scrollspy actualizará para resaltar el enlace activo.
+                                    </p>
+                                </div>
+
+                                <!-- 3 -->
+                                <div class="explicacion-item">
+                                    <img src="img/parte2-items.png" alt="Enlaces del menú">
+                                    <p><strong>3) Enlaces del menú:</strong> Los enlaces de navegación usan
+                                        <code>&lt;a href="#seccion"&gt;</code>. Scrollspy se encarga de agregar la clase
+                                        <code>.active</code> automáticamente al enlace que coincide con la sección
+                                        visible.
+                                    </p>
+                                </div>
+
+                                <!-- 4 -->
+                                <div class="explicacion-item">
+                                    <img src="img/parte2-secciones.png" alt="Secciones con ID">
+                                    <p><strong>4) Secciones del contenido:</strong> Cada sección debe tener un
+                                        <code>id</code> correspondiente a los enlaces del menú. Al desplazarse la
+                                        página,
+                                        Scrollspy detecta qué sección está en pantalla y resalta el enlace asociado.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <h1 class="h3 mb-4" id="parte3">3) Ejecución del código</h1>
+
+                    <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h5 class="m-0 font-weight-bold text-primary">Example 1: Scrollspy aplicado al &lt;body&gt;</h5>
+                            <h5 class="m-0 font-weight-bold text-primary">Example 1: Scrollspy aplicado al &lt;body&gt;
+                            </h5>
                         </div>
 
                         <div class="card-body">
 
-                        <pre id="code-scrollspy" class="bg-light p-3 border rounded" style="font-family: 'Roboto Mono', monospace; font-size: 14px;">
+                            <pre id="code-scrollspy" class="bg-light p-3 border rounded"
+                                style="font-family: 'Roboto Mono', monospace; font-size: 14px;">
                             &lt;!-- Activación de Scrollspy en el &lt;body&gt; --&gt;
                             &lt;body data-bs-spy="scroll"
                                 data-bs-target="#scrollspy-topbar-menu"
@@ -303,9 +314,9 @@
                             <button id="btn-ejecutar-scrollspy" class="btn btn-primary mt-3">EJECUTAR</button>
 
                         </div>
-                        </div>
+                    </div>
 
-                        <div class="card shadow mb-4" id="parte4">
+                    <div class="card shadow mb-4" id="parte4">
                         <div class="card shadow mb-4" id="parte4">
                             <div class="card-header py-3">
                                 <h5 class="m-0 font-weight-bold text-primary">Vista en ejecución</h5>
@@ -318,29 +329,33 @@
                             </div>
                         </div>
 
+                    </div>
+
+                    <!-- SECCIÓN 4: EJEMPLO CON GRUPO DE LISTAS -->
+                    <h1 class="h3 mb-4" id="parte5" style="margin-top: 50px;">4) Ejemplo con grupo de listas</h1>
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h5 class="m-0 font-weight-bold text-primary">Scrollspy usando list-group en lugar de nav
+                            </h5>
                         </div>
 
-                        <!-- NUEVA SECCIÓN: EJEMPLO CON GRUPO DE LISTAS -->
-                        <h1 class="h3 mb-4" id="parte5" style="margin-top: 50px;">4) Ejemplo con grupo de listas</h1>
+                        <div class="card-body">
 
-                        <div class="card shadow mb-4">
-                            <div class="card-header py-3">
-                                <h5 class="m-0 font-weight-bold text-primary">Scrollspy usando list-group en lugar de nav</h5>
-                            </div>
+                            <h3 style="color:#212529; font-weight:600; margin-top:25px;">Teoría</h3>
+                            <p style="text-align:justify;">
+                                Scrollspy también puede implementarse usando el componente <code>.list-group</code> de
+                                Bootstrap,
+                                que ofrece un diseño limpio y segmentado.
+                                Cada elemento se activa automáticamente según el desplazamiento del contenido.
+                            </p>
 
-                            <div class="card-body">
+                            <h3 style="color:#212529; font-weight:600;">Ejecución del código</h3>
+                            <p>Pulsa <strong>Ejecutar</strong> para ver el Scrollspy con grupos de listas y
+                                desplazamiento dinámico.</p>
 
-                                <h3 style="color:#212529; font-weight:600; margin-top:25px;">Teoría</h3>
-                                <p style="text-align:justify;">
-                                    Scrollspy también puede implementarse usando el componente <code>.list-group</code> de Bootstrap, 
-                                    que ofrece un diseño limpio y segmentado. 
-                                    Cada elemento se activa automáticamente según el desplazamiento del contenido.
-                                </p>
-
-                                <h3 style="color:#212529; font-weight:600;">Ejecución del código</h3>
-                                <p>Pulsa <strong>Ejecutar</strong> para ver el Scrollspy con grupos de listas y desplazamiento dinámico.</p>
-
-                                <pre id="codeBox2" style="background-color:#212529;color:#f8f9fa;border-radius:8px;padding:15px;font-family:monospace;overflow-x:auto;user-select:none;">
+                            <pre id="codeBox2"
+                                style="background-color:#212529;color:#f8f9fa;border-radius:8px;padding:15px;font-family:monospace;overflow-x:auto;user-select:none;">
 &lt;div class="row"&gt;
   &lt;div class="col-md-4"&gt;
     &lt;div id="list-example-demo" class="list-group shadow-sm"
@@ -393,91 +408,158 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-                                </pre>
+                            </pre>
 
-                                <div class="mt-3 d-flex gap-2">
-                                    <button id="runCode2" class="btn btn-success"><i class="bi bi-play-fill"></i> Ejecutar</button>
-                                    <button id="resetCode2" class="btn btn-outline-danger"><i class="bi bi-x-circle"></i> Resetear</button>
-                                </div>
-
-                                <div id="resultBox2" style="background-color:#fff;border:1px solid #dee2e6;border-radius:8px;padding:20px;margin-top:20px;"></div>
-
+                            <div class="mt-3 d-flex gap-2">
+                                <button id="runCode2" class="btn btn-success"><i class="bi bi-play-fill"></i>
+                                    Ejecutar</button>
+                                <button id="resetCode2" class="btn btn-outline-danger"><i class="bi bi-x-circle"></i>
+                                    Resetear</button>
                             </div>
+
+                            <div id="resultBox2"
+                                style="background-color:#fff;border:1px solid #dee2e6;border-radius:8px;padding:20px;margin-top:20px;">
+                            </div>
+
                         </div>
+                    </div>
 
                 </div>
             </div>
         </div>
 
-        <script src="../../vendor/jquery/jquery.min.js"></script>
-        <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
-        <script src="../../js/sb-admin-2.min.js"></script>
+    </div>
 
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts -->
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../../js/sb-admin-2.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 
-        <script src="js/main.js"></script>
+    <!-- SCRIPT CORREGIDO PARA SCROLLSPY CON LIST-GROUP -->
+    <script>
+        $(document).ready(function () {
 
-        <!-- Scripts para el ejemplo con list-group -->
-        <script>
-            $(document).ready(function(){
-                // === Ejemplo con list-group ===
-                $("#runCode2").click(function(){
-                    const code=$("#codeBox2").text().replace(/&lt;/g,"<").replace(/&gt;/g,">");
-                    $("#resultBox2").html(code).hide().fadeIn(600);
-                    
-                    // Esperar a que el DOM se actualice completamente
-                    setTimeout(function(){
-                        // Buscar el contenedor de scroll
-                        const scrollContainer = document.querySelector('#resultBox2 #scrollspy-demo');
-                        
-                        if(scrollContainer){
-                            // Eliminar instancia anterior si existe
-                            const existingInstance = bootstrap.ScrollSpy.getInstance(scrollContainer);
-                            if(existingInstance) {
-                                existingInstance.dispose();
-                            }
-                            
-                            // Crear nueva instancia de ScrollSpy
-                            const scrollspy = new bootstrap.ScrollSpy(scrollContainer, {
-                                target: '#list-example-demo'
-                            });
-                        }
-                    }, 150);
-                });
-                
-                $("#resetCode2").click(function(){
-                    $("#resultBox2").fadeOut(400,function(){
-                        $(this).html("");
-                    });
-                });
+            $("#runCode2").click(function () {
+                const code = $("#codeBox2").text().replace(/&lt;/g, "<").replace(/&gt;/g, ">");
+                $("#resultBox2").html(code);
 
-                // === Personaliza el color del enlace activo ===
-                document.addEventListener('activate.bs.scrollspy', function (event) {
-                    const resultBox = document.getElementById('resultBox2');
-                    
-                    // Solo aplicar si el evento está dentro de resultBox2
-                    if(resultBox && resultBox.contains(event.target)){
-                        // Resetear todos los items
-                        const allItems = resultBox.querySelectorAll('.list-group-item');
-                        allItems.forEach(el => {
-                            el.classList.remove('active');
-                            el.style.backgroundColor = '#e9f0f8';
-                            el.style.color = '#003366';
-                            el.style.fontWeight = 'normal';
-                            el.style.borderLeft = 'none';
-                        });
-                        
-                        // Resaltar el activo
-                        const activeItem = event.target;
-                        activeItem.style.backgroundColor = '#003366';
-                        activeItem.style.color = '#ffffff';
-                        activeItem.style.fontWeight = 'bold';
-                        activeItem.style.borderLeft = '4px solid #003366';
-                    }
+                // Esperar a que el DOM esté completamente listo
+                setTimeout(function () {
+                    configurarScrollspy();
+                }, 300);
+            });
+
+            $("#resetCode2").click(function () {
+                $("#resultBox2").fadeOut(400, function () {
+                    $(this).html("").fadeIn();
                 });
             });
-        </script>
+
+            function configurarScrollspy() {
+                const resultBox = document.getElementById('resultBox2');
+                if (!resultBox) return;
+
+                const scrollContainer = resultBox.querySelector('#scrollspy-demo');
+                const listGroup = resultBox.querySelector('#list-example-demo');
+
+                if (!scrollContainer || !listGroup) {
+                    console.error('No se encontraron los elementos necesarios');
+                    console.log('scrollContainer:', scrollContainer);
+                    console.log('listGroup:', listGroup);
+                    return;
+                }
+
+                // Obtener todas las referencias de los enlaces
+                const links = listGroup.querySelectorAll('a.list-group-item');
+                const sections = {};
+
+                links.forEach(link => {
+                    const href = link.getAttribute('href');
+                    const id = href.substring(1);
+                    const element = scrollContainer.querySelector(href);
+                    if (element) {
+                        sections[id] = { link: link, element: element };
+                    }
+                });
+
+                console.log('Secciones encontradas:', Object.keys(sections));
+
+                // Función para actualizar el estado activo
+                function updateActiveLink() {
+                    let closestSection = null;
+                    let closestDistance = Infinity;
+
+                    Object.keys(sections).forEach(id => {
+                        const section = sections[id];
+                        const rect = section.element.getBoundingClientRect();
+                        const containerRect = scrollContainer.getBoundingClientRect();
+
+                        // Calcular la distancia desde el top del contenedor
+                        const distance = Math.abs(rect.top - containerRect.top - 50);
+
+                        // Verificar si está en el viewport y es el más cercano
+                        if (rect.top < containerRect.bottom && rect.bottom > containerRect.top) {
+                            if (distance < closestDistance) {
+                                closestDistance = distance;
+                                closestSection = id;
+                            }
+                        }
+                    });
+
+                    // Remover active de todos
+                    links.forEach(link => {
+                        link.classList.remove('active');
+                        link.style.backgroundColor = '#e9f0f8';
+                        link.style.color = '#003366';
+                        link.style.fontWeight = 'normal';
+                        link.style.borderLeft = 'none';
+                    });
+
+                    // Agregar active al más cercano
+                    if (closestSection && sections[closestSection]) {
+                        const activeLink = sections[closestSection].link;
+                        activeLink.classList.add('active');
+                        activeLink.style.backgroundColor = '#003366';
+                        activeLink.style.color = '#ffffff';
+                        activeLink.style.fontWeight = 'bold';
+                        activeLink.style.borderLeft = '4px solid #0056b3';
+                    }
+                }
+
+                // Event listener para scroll
+                scrollContainer.addEventListener('scroll', updateActiveLink);
+
+                // Llamar una vez al inicio
+                updateActiveLink();
+
+                // Event listeners para los clics en los enlaces
+                links.forEach(link => {
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const href = this.getAttribute('href');
+                        const target = scrollContainer.querySelector(href);
+
+                        if (target) {
+                            // Scroll suave hacia el elemento
+                            const offsetTop = target.offsetTop - 20;
+                            scrollContainer.scrollTo({
+                                top: offsetTop,
+                                behavior: 'smooth'
+                            });
+
+                            // Actualizar active después del scroll
+                            setTimeout(updateActiveLink, 100);
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+
+
 
 </body>
 
