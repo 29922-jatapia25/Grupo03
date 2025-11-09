@@ -275,65 +275,82 @@
                     </div>
 
                     <h1 class="h3 mb-4" id="parte3">3) Ejecución del código</h1>
+                    <!-- Ejemplo con NAVBAR dentro de un solo contenedor (una columna) -->
 
                     <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h5 class="m-0 font-weight-bold text-primary">Example 1: Scrollspy aplicado al &lt;body&gt;
-                            </h5>
-                        </div>
+                    <div class="card-header py-3">
+                        <h5 class="m-0 font-weight-bold text-primary">Ejemplo en la barra de navegación → (Scrollspy aplicado al <code>navbar</code>)</h5>
+                    </div>
 
-                        <div class="card-body">
+                    <div class="card-body">
+                        <p>Haz clic en <strong>Ejecutar</strong>. El navbar queda fijo dentro del área y se marca el link activo al hacer scroll.</p>
 
-                            <pre id="code-scrollspy" class="bg-light p-3 border rounded"
-                                style="font-family: 'Roboto Mono', monospace; font-size: 14px;">
-                            &lt;!-- Activación de Scrollspy en el &lt;body&gt; --&gt;
-                            &lt;body data-bs-spy="scroll"
-                                data-bs-target="#scrollspy-topbar-menu"
-                                data-bs-offset="90"
-                                tabindex="0"&gt;
+                        <!-- Código a inyectar (mostrado como texto) -->
+                        <pre id="codeBoxNavbar" class="bg-dark text-light p-3 rounded"
+                            style="white-space: pre; overflow-x: auto; user-select: none;">
+                    &lt;!-- CONTENEDOR DEMO (una columna) --&gt;
+                    &lt;div id="demo-navbar-wrapper"
+                        style="border:1px solid #dee2e6;border-radius:10px;background:#fff;"&gt;
 
-                                &lt;!-- Menú de navegación que Scrollspy actualizará --&gt;
-                                &lt;nav class="navbar navbar-light bg-light fixed-top"&gt;
-                                    &lt;ul id="scrollspy-topbar-menu" class="navbar-nav ms-auto flex-row gap-3"&gt;
-                                        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#parte1"&gt;1) Teoría&lt;/a&gt;&lt;/li&gt;
-                                        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#parte2"&gt;2) Ejemplo&lt;/a&gt;&lt;/li&gt;
-                                        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#parte3"&gt;3) Ejecución&lt;/a&gt;&lt;/li&gt;
-                                        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#parte4"&gt;4) Ejercicio&lt;/a&gt;&lt;/li&gt;
-                                    &lt;/ul&gt;
-                                &lt;/nav&gt;
+                    &lt;!-- NAVBAR FIJO dentro del contenedor (bajo y horizontal) --&gt;
+                    &lt;nav id="demoNavbar" class="navbar navbar-light bg-white sticky-top py-1"
+                        style="border-bottom:1px solid #e9ecef; position: sticky; top: 0; z-index: 10;"&gt;
+                        &lt;ul class="navbar-nav flex-row gap-3 ms-3" id="demo-navbar-menu"&gt;
+                        &lt;li class="nav-item"&gt;&lt;a class="nav-link px-1" href="#sec-intro"&gt;Introducción&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class="nav-item"&gt;&lt;a class="nav-link px-1" href="#sec-uso"&gt;Cómo se usa&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class="nav-item"&gt;&lt;a class="nav-link px-1" href="#sec-tips"&gt;Tips&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class="nav-item"&gt;&lt;a class="nav-link px-1" href="#sec-fin"&gt;Fin&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
 
-                                &lt;!-- Secciones del contenido --&gt;
-                                &lt;section id="parte1"&gt;...&lt;/section&gt;
-                                &lt;section id="parte2"&gt;...&lt;/section&gt;
-                                &lt;section id="parte3"&gt;...&lt;/section&gt;
-                                &lt;section id="parte4"&gt;...&lt;/section&gt;
+                    &lt;!-- ÁREA CON SCROLL (el verdadero "spy") --&gt;
+                    &lt;div id="demo-scroll-area"
+                        tabindex="0"
+                        style="height:420px; overflow:auto; padding:20px; position:relative;"
+                        data-bs-spy="scroll" data-bs-target="#demo-navbar-menu" data-bs-offset="60"&gt;
 
-                            &lt;/body&gt;
+                        &lt;h4 id="sec-intro"&gt;Introducción&lt;/h4&gt;
+                        &lt;p&gt;Scrollspy aplicado a un navbar dentro de un contenedor scrolleable y en una sola columna.&lt;/p&gt;
+                        &lt;p&gt;El navbar queda fijo (sticky) arriba del contenedor y se resalta el enlace activo.&lt;/p&gt;
+                        &lt;p&gt;Contenido de relleno…&lt;/p&gt;
+                        &lt;p&gt;Contenido de relleno…&lt;/p&gt;
+
+                        &lt;h4 id="sec-uso" style="margin-top:2rem"&gt;Cómo se usa&lt;/h4&gt;
+                        &lt;ol&gt;
+                        &lt;li&gt;Pon &lt;code&gt;data-bs-spy="scroll"&lt;/code&gt; en el elemento que hace scroll.&lt;/li&gt;
+                        &lt;li&gt;Usa &lt;code&gt;data-bs-target="#demo-navbar-menu"&lt;/code&gt; apuntando al &lt;ul&gt; del navbar.&lt;/li&gt;
+                        &lt;li&gt;Ajusta &lt;code&gt;data-bs-offset&lt;/code&gt; según la altura del navbar.&lt;/li&gt;
+                        &lt;/ol&gt;
+                        &lt;p&gt;Más relleno…&lt;/p&gt;
+                        &lt;p&gt;Más relleno…&lt;/p&gt;
+
+                        &lt;h4 id="sec-tips" style="margin-top:2rem"&gt;Tips&lt;/h4&gt;
+                        &lt;ul&gt;
+                        &lt;li&gt;Este div tiene &lt;code&gt;position: relative&lt;/code&gt; (requisito de Scrollspy).&lt;/li&gt;
+                        &lt;li&gt;Si usas Bootstrap 4, cambia a &lt;code&gt;data-spy&lt;/code&gt;/&lt;code&gt;data-target&lt;/code&gt;.&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;p&gt;Más relleno…&lt;/p&gt;
+                        &lt;p&gt;Más relleno…&lt;/p&gt;
+
+                        &lt;h4 id="sec-fin" style="margin-top:2rem"&gt;Fin&lt;/h4&gt;
+                        &lt;p&gt;Listo. Navbar fijo + Scrollspy en una sola columna dentro del área de demo.&lt;/p&gt;
+                        &lt;p&gt;Más relleno…&lt;/p&gt;
+
+                    &lt;/div&gt;
+                    &lt;/div&gt;
                         </pre>
 
-                            <button id="btn-ejecutar-scrollspy" class="btn btn-primary mt-3">EJECUTAR</button>
-
-                        </div>
-                    </div>
-
-                    <div class="card shadow mb-4" id="parte4">
-                        <div class="card shadow mb-4" id="parte4">
-                            <div class="card-header py-3">
-                                <h5 class="m-0 font-weight-bold text-primary">Vista en ejecución</h5>
-                            </div>
-
-                            <div class="card-body">
-                                <iframe id="iframe-demo" src="parte4.html"
-                                    style="width:100%; height:600px; border: 2px solid #ccc; border-radius:6px;">
-                                </iframe>
-                            </div>
+                        <div class="mt-3 d-flex gap-2">
+                        <button id="runCodeNavbar" class="btn btn-success">Ejecutar</button>
+                        <button id="resetCodeNavbar" class="btn btn-outline-danger">Resetear</button>
                         </div>
 
+                        <!-- Aquí se renderiza el demo -->
+                        <div id="resultBoxNavbar" class="mt-3"
+                            style="background:#fff;border:1px solid #dee2e6;border-radius:8px;padding:10px;"></div>
                     </div>
-
-                    <!-- SECCIÓN 4: EJEMPLO CON GRUPO DE LISTAS -->
-                    <h1 class="h3 mb-4" id="parte5" style="margin-top: 50px;">4) Ejemplo con grupo de listas</h1>
-
+                    </div>
+                
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h5 class="m-0 font-weight-bold text-primary">Scrollspy usando list-group en lugar de nav
@@ -424,7 +441,28 @@
                         </div>
                     </div>
 
+
+                    <h1 class="h3 mb-4" id="parte3">4) Ejercicio de la Prueba</h1>
+                    <!-- SECCIÓN 4 -->
+                    <div class="card shadow mb-4" id="parte4">
+                        <div class="card shadow mb-4" id="parte4">
+                            <div class="card-header py-3">
+                                <h5 class="m-0 font-weight-bold text-primary">Vista en ejecución</h5>
+                            </div>
+
+                            <div class="card-body">
+                                <iframe id="iframe-demo" src="parte4.html"
+                                    style="width:100%; height:600px; border: 2px solid #ccc; border-radius:6px;">
+                                </iframe>
+                            </div>
+                        </div>
+
+                    </div>
+
+
                 </div>
+
+                
             </div>
         </div>
 

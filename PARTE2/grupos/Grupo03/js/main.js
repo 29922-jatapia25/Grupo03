@@ -105,3 +105,58 @@ document.addEventListener("DOMContentLoaded", () => {
   // 5) Reemplazar el contenido sin dañarlo
   pre.innerHTML = lines.join("\n");
 });
+
+// ===== Parte 3: Scrollspy usando NAVBAR (una columna) =====
+(function () {
+  const pre   = document.getElementById('codeBoxNavbar');
+  const run   = document.getElementById('runCodeNavbar');
+  const reset = document.getElementById('resetCodeNavbar');
+  const box   = document.getElementById('resultBoxNavbar');
+  if (!pre || !run || !reset || !box) return;
+
+  // Limpia indentación del <pre> para que el HTML salga bien
+  const normalizePre = (p) => {
+    const raw = p.textContent.split('\n');
+    while (raw.length && raw[0].trim() === '') raw.shift();
+    while (raw.length && raw[raw.length - 1].trim() === '') raw.pop();
+    const ind = Math.min(...raw.filter(l => l.trim()).map(l => l.match(/^(\s*)/)[0].length));
+    p.textContent = raw.map(l => l.slice(ind)).join('\n');
+  };
+  normalizePre(pre);
+
+  run.addEventListener('click', () => {
+    // Inyecta el HTML del demo
+    const html = pre.textContent.replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+    box.innerHTML = html;
+
+    // Inicializa ScrollSpy según la versión de Bootstrap
+    const area = box.querySelector('#demo-scroll-area');
+
+    // Si es Bootstrap 5
+    if (window.bootstrap && window.bootstrap.ScrollSpy) {
+      const prev = window.bootstrap.ScrollSpy.getInstance(area);
+      if (prev) prev.dispose();
+      new window.bootstrap.ScrollSpy(area, { target: '#demo-navbar-menu', offset: 60 });
+    } else if (window.jQuery && typeof jQuery.fn.scrollspy === 'function') {
+      // Bootstrap 4 (jQuery)
+      jQuery(area).scrollspy({ target: '#demo-navbar-menu', offset: 60 });
+    }
+
+    // Navegación suave (no deja que el enlace haga scroll del body)
+    box.querySelectorAll('#demo-navbar-menu a.nav-link').forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const id = a.getAttribute('href');
+        const target = box.querySelector(id);
+        if (!target) return;
+        const top = target.offsetTop - 10;
+        area.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+
+    // Fuerza cálculo inicial
+    area.dispatchEvent(new Event('scroll'));
+  });
+
+  reset.addEventListener('click', () => box.innerHTML = '');
+})();
