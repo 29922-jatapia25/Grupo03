@@ -446,21 +446,99 @@
 
                     <h1 class="h3 mb-4" id="parte3">4) Ejercicio de la Prueba</h1>
                     <!-- SECCIÓN 4 -->
-                    <div class="card shadow mb-4" id="parte4">
-                        <div class="card shadow mb-4" id="parte4">
-                            <div class="card-header py-3">
-                                <h5 class="m-0 font-weight-bold text-primary">Vista en ejecución</h5>
-                            </div>
 
-                            <div class="card-body">
-                                <iframe id="iframe-demo" src="parte4.html"
-                                    style="width:100%; height:600px; border: 2px solid #ccc; border-radius:6px;">
-                                </iframe>
-                            </div>
+                    <!-- === EXPLICACIÓN: Scrollspy usando NAVBAR (arriba del card de la demo) === -->
+                    <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h5 class="m-0 font-weight-bold text-primary">Ejemplo con NAVBAR — Explicación del código</h5>
+                    </div>
+
+                    <div class="card-body" style="max-width:900px;margin:auto">
+
+                        <!-- 1) ACTIVACIÓN -->
+                        <div style="background:#fff;border-left:4px solid #28a745;border-radius:10px;
+                                    box-shadow:0 2px 6px rgba(0,0,0,.1);padding:18px 22px;margin-bottom:18px;">
+                        <h5 style="color:#198754;font-weight:bold;margin-bottom:8px;">1) Activación del ScrollSpy</h5>
+                        <p style="text-align:justify;margin-bottom:10px;">
+                            En este ejemplo el <b>espía</b> se activa sobre el <code>&lt;body&gt;</code> porque usamos Bootstrap 3:
+                            <code>data-spy="scroll"</code>, <code>data-target="#MenuBar"</code> y <code>data-offset="80..100"</code>.
+                            Así, el <b>menú superior</b> se actualiza según la sección visible.
+                        </p>
+                        <!-- Sustituye la imagen por tu captura -->
+                        <img src="img/NAV_activacion.png" alt="Activación en el body con data-spy, data-target y data-offset"
+                            style="max-width:100%;border-radius:8px;border:1px solid #e5e5e5">
+                        </div>
+
+                        <!-- 2) NAVBAR FIJO -->
+                        <div style="background:#fff;border-left:4px solid #28a745;border-radius:10px;
+                                    box-shadow:0 2px 6px rgba(0,0,0,.1);padding:18px 22px;margin-bottom:18px;">
+                        <h5 style="color:#198754;font-weight:bold;margin-bottom:8px;">2) Barra de navegación fija</h5>
+                        <p style="text-align:justify;margin-bottom:10px;">
+                            El menú es un <code>&lt;nav id="MenuBar" class="navbar navbar-inverse"&gt;</code> con
+                            <code>position:fixed; top:0; width:100%</code> para mantenerlo visible. El <b>id</b> <code>#MenuBar</code> es
+                            el mismo que se usa en <code>data-target</code>.
+                        </p>
+                        <img src="img/NAV_navbar.png" alt="Navbar fijo con id MenuBar" 
+                            style="max-width:100%;border-radius:8px;border:1px solid #e5e5e5">
+                        </div>
+
+                        <!-- 3) ENLACES -->
+                        <div style="background:#fff;border-left:4px solid #28a745;border-radius:10px;
+                                    box-shadow:0 2px 6px rgba(0,0,0,.1);padding:18px 22px;margin-bottom:18px;">
+                        <h5 style="color:#198754;font-weight:bold;margin-bottom:8px;">3) Enlaces del menú</h5>
+                        <p style="text-align:justify;margin-bottom:10px;">
+                            Cada <code>&lt;a&gt;</code> apunta con <code>href="#id"</code> a su sección (<code>#inicio</code>,
+                            <code>#docente</code>, <code>#comandante</code>, <code>#grupos</code>). Scrollspy aplica
+                            <code>.active</code> al <code>&lt;li&gt;</code> correspondiente.
+                        </p>
+                        <img src="img/NAV_enlaces.png" alt="Enlaces del menú con anchor a cada sección"
+                            style="max-width:100%;border-radius:8px;border:1px solid #e5e5e5">
+                        </div>
+
+                        <!-- 4) SECCIONES -->
+                        <div style="background:#fff;border-left:4px solid #28a745;border-radius:10px;
+                                    box-shadow:0 2px 6px rgba(0,0,0,.1);padding:18px 22px;margin-bottom:18px;">
+                        <h5 style="color:#198754;font-weight:bold;margin-bottom:8px;">4) Secciones observadas</h5>
+                        <p style="text-align:justify;margin-bottom:10px;">
+                            Las secciones del contenido usan <code>id</code> que coincide con los enlaces. Se agrega
+                            <code>margin-top</code> o <code>padding-top</code> (y un <b>offset</b> de ~100 px) para que el título no quede
+                            oculto bajo el navbar fijo.
+                        </p>
+                        <img src="img/NAV_secciones.png" alt="Secciones con id: inicio, docente, comandante, grupos"
+                            style="max-width:100%;border-radius:8px;border:1px solid #e5e5e5">
+                        </div>
+
+                        <!-- 5) INICIALIZACIÓN -->
+                        <div style="background:#fff;border-left:4px solid #28a745;border-radius:10px;
+                                    box-shadow:0 2px 6px rgba(0,0,0,.1);padding:18px 22px;margin-bottom:18px;">
+                        <h5 style="color:#198754;font-weight:bold;margin-bottom:8px;">5) Inicialización con jQuery (Bootstrap 3)</h5>
+                        <p style="text-align:justify;margin-bottom:10px;">
+                            Se refuerza la activación con jQuery: 
+                            <code>$('body').scrollspy({ target: '#MenuBar', offset: 100 });</code>
+                            El <b>offset</b> debe aproximar la altura de tu navbar + espacio superior.
+                        </p>
+                        <img src="img/NAV_init.png" alt="Inicialización jQuery scrollspy con offset"
+                            style="max-width:100%;border-radius:8px;border:1px solid #e5e5e5">
+                        <p style="font-size:.95rem;color:#6c757d;margin:10px 0 0 0;">
+                            • Código real en <code>parte4.html</code> (navbar + secciones + scrollspy). :contentReference[oaicite:4]{index=4} <br>
+                            • Estilos de los codebox y la UI vienen de tu hoja de estilos. :contentReference[oaicite:5]{index=5}
+                        </p>
                         </div>
 
                     </div>
 
+                    <div class="card-header py-3">
+                        <h5 class="m-0 font-weight-bold text-primary">Vista en ejecución</h5>
+                        </div>
+                        <div class="card-body">
+                        <iframe id="iframe-demo" src="parte4.html"
+                                style="width:100%; height:600px; border: 2px solid #ccc; border-radius:6px;">
+                        </iframe>
+                    </div>
+
+                    </div>
+
+                    
                     <div class="card shadow mb-4" id="parte4">
                         <div class="card shadow mb-4" id="parte4">
                             <div class="card-header py-3">
