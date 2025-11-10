@@ -199,9 +199,72 @@
                                             desplazamiento.</li>
                                     </ul>
 
+                                    <hr class="my-5">
+
+                                    <h3 class="text-primary fw-bold" style="font-size: 1.8rem;">
+                                        Scrollspy aplicado específicamente al NAVBAR
+                                    </h3>
+
+                                    <p class="text-muted" style="font-size: 1.05rem;">
+                                        Cuando Scrollspy se utiliza en conjunto con una barra de navegación (<code>&lt;nav&gt;</code>), su función principal es 
+                                        <strong>resaltar automáticamente</strong> cuál enlace del menú corresponde a la sección del documento que está visible en ese instante. 
+                                        Esto mejora la <strong>orientación del usuario</strong> dentro de páginas con varias secciones extensas.
+                                    </p>
+
+
+                                    <h4 class="fw-bold mt-4">¿Qué lo diferencia de otros tipos de Scrollspy?</h4>
+                                    <p style="font-size: 1.05rem;">
+                                        Aunque el componente Scrollspy puede aplicarse sobre listas y contenedores internos, 
+                                        cuando se usa con un <strong>navbar fijo en la parte superior</strong>, el menú actúa como una guía constante. 
+                                        Esto permite que el usuario siempre tenga visible la navegación, facilitando el desplazamiento entre secciones.
+                                    </p>
+
+
+                                    <h4 class="fw-bold mt-4">Requisitos clave al usar Scrollspy con NAVBAR</h4>
+                                    <ul style="font-size: 1.05rem;">
+                                        <li>El elemento que contiene el desplazamiento (generalmente <code>&lt;body&gt;</code>) debe tener <code>data-bs-spy="scroll"</code>.</li>
+                                        <li>El menú del navbar debe tener un <strong>id</strong>, el cual será referenciado desde <code>data-bs-target</code>.</li>
+                                        <li>Cada enlace del navbar debe apuntar a una <strong>sección con un id único</strong>.</li>
+                                        <li>Puede configurarse <code>data-bs-offset</code> para compensar la altura del navbar fijo.</li>
+                                    </ul>
+
+
+                                    <h4 class="fw-bold mt-4">Ejemplo de configuración mínima</h4>
+
+                                    <pre  class="p-3 rounded" style="background:#000; color:#f8f8f2; white-space:pre; overflow:auto; font-size:14px;">
+&lt;body data-bs-spy="scroll" data-bs-target="#menuNavbar" data-bs-offset="80" tabindex="0"&gt;
+
+    &lt;nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"&gt;
+        &lt;ul id="menuNavbar" class="navbar-nav ms-auto"&gt;
+            &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#seccion1"&gt;Sección 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#seccion2"&gt;Sección 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#seccion3"&gt;Sección 3&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+
+    &lt;section id="seccion1"&gt;...&lt;/section&gt;
+    &lt;section id="seccion2"&gt;...&lt;/section&gt;
+    &lt;section id="seccion3"&gt;...&lt;/section&gt;
+
+&lt;/body&gt;
+                                    </pre>
+
+
+                                    <h4 class="fw-bold mt-4">Comportamiento visual esperado</h4>
+                                    <p style="font-size: 1.05rem;">
+                                        A medida que el usuario se desplaza, Bootstrap <strong>detecta</strong> automáticamente la sección visible
+                                        y agrega la clase <code>.active</code> al enlace correspondiente del navbar, resaltándolo.
+                                        Esto guía visualmente al usuario y evita que se pierda dentro de la página.
+                                    </p>
+
                                 </div>
+
+                                 
                             </div>
+
+                            
                         </div>
+
                     </div>
 
                     <!-- PARTE 2 - EJEMPLO DEL VIDEO + EXPLICACIÓN -->
