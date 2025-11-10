@@ -1042,14 +1042,14 @@
                 const pre = document.getElementById('codeParte4.2');
                 if (!pre) return;
 
-                fetch('parte4.2.html', { cache: 'no-store' })
+                fetch('Parte4.2.html', { cache: 'no-store' })
                     .then(r => r.ok ? r.text() : Promise.reject('No se pudo leer parte4.2.html'))
                     .then(txt => {
                         // Mostrar el código TAL CUAL, sin escapar nada
                         pre.textContent = txt;
                     })
                     .catch(err => {
-                        pre.textContent = 'Error cargando parte4.2.html: ' + err;
+                        pre.textContent = 'Error cargando Parte4.2.html: ' + err;
                     });
             })();
 
@@ -1060,7 +1060,7 @@
                 const iframe = document.getElementById('iframeParte4.2');
 
                 btnRun.addEventListener('click', function () {
-                    iframe.src = 'parte4.2.html';
+                    iframe.src = 'Parte4.2.html';
                     iframe.style.display = 'block';
                 });
 
