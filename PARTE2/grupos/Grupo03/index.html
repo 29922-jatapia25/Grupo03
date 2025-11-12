@@ -11,17 +11,17 @@
     <title>EXAMEN PARCIAL 1 - Scrollspy</title>
 
     <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
 
+    <!-- Bootstrap 5.1.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
-
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-
     <link href="css/style.css" rel="stylesheet">
+    
+    <link href="css/megamenu.css" rel="stylesheet">
 
 </head>
 
@@ -135,18 +135,16 @@
                 <div class="container-fluid">
                     <h1 class="h3 mb-4">Scrollspy - Grupo 03</h1>
 
-
                     <div class="row" id="parte1">
                         <div class="col-lg-12 mb-4">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h5 class="m-0 font-weight-bold text-primary">
-                                        Explicación profunda del componente Scrollspy (Bootstrap 5)
-                                    </h5>
+                                    <h2 class="text-primary fw-bold" style="font-size: 1.8rem;">Teoría</h2>
                                 </div>
+
                                 <div class="card-body">
 
-                                    <h2 class="text-secondary fw-bold"> Descripción general</h2>
+                                    <h4 class="text-secondary fw-bold"> Descripción general</h4>
                                     <p>
                                         El componente <strong>Scrollspy</strong> de Bootstrap es una herramienta
                                         dinámica que
@@ -161,7 +159,7 @@
 
                                     <hr>
 
-                                    <h2 class="text-secondary fw-bold"> Funcionamiento general</h2>
+                                    <h4 class="text-secondary fw-bold"> Funcionamiento general</h4>
                                     <p>
                                         Cuando el usuario se desplaza por una página extensa,
                                         Scrollspy "espía" el movimiento del desplazamiento y
@@ -183,7 +181,7 @@
 
                                     <hr>
 
-                                    <h2 class="text-secondary fw-bold">Estructura básica y atributos principales</h2>
+                                    <h4 class="text-secondary fw-bold">Estructura básica y atributos principales</h4>
                                     <p>
                                         Para implementar Scrollspy correctamente se deben configurar ciertos
                                         <strong>atributos HTML</strong> que permiten vincular el área con desplazamiento
@@ -199,11 +197,9 @@
                                             desplazamiento.</li>
                                     </ul>
 
-                                    <hr class="my-5">
+                                    <hr class="my-4">
 
-                                    <h3 class="text-primary fw-bold" style="font-size: 1.8rem;">
-                                        Scrollspy aplicado específicamente al NAVBAR
-                                    </h3>
+                                    <h4 class="text-secondary fw-bold">Aplicado al NAVBAR</h4>
 
                                     <p class="text-muted" style="font-size: 1.05rem;">
                                         Cuando Scrollspy se utiliza en conjunto con una barra de navegación
@@ -214,70 +210,9 @@
                                         varias secciones extensas.
                                     </p>
 
+                                    <hr class="my-4">
 
-                                    <h4 class="fw-bold mt-4">¿Qué lo diferencia de otros tipos de Scrollspy?</h4>
-                                    <p style="font-size: 1.05rem;">
-                                        Aunque el componente Scrollspy puede aplicarse sobre listas y contenedores
-                                        internos,
-                                        cuando se usa con un <strong>navbar fijo en la parte superior</strong>, el menú
-                                        actúa como una guía constante.
-                                        Esto permite que el usuario siempre tenga visible la navegación, facilitando el
-                                        desplazamiento entre secciones.
-                                    </p>
-
-
-                                    <h4 class="fw-bold mt-4">Requisitos clave al usar Scrollspy con NAVBAR</h4>
-                                    <ul style="font-size: 1.05rem;">
-                                        <li>El elemento que contiene el desplazamiento (generalmente
-                                            <code>&lt;body&gt;</code>) debe tener <code>data-bs-spy="scroll"</code>.
-                                        </li>
-                                        <li>El menú del navbar debe tener un <strong>id</strong>, el cual será
-                                            referenciado desde <code>data-bs-target</code>.</li>
-                                        <li>Cada enlace del navbar debe apuntar a una <strong>sección con un id
-                                                único</strong>.</li>
-                                        <li>Puede configurarse <code>data-bs-offset</code> para compensar la altura del
-                                            navbar fijo.</li>
-                                    </ul>
-
-
-                                    <h4 class="fw-bold mt-4">Ejemplo de configuración mínima</h4>
-
-                                    <pre class="p-3 rounded"
-                                        style="background:#000; color:#f8f8f2; white-space:pre; overflow:auto; font-size:14px;">
-&lt;body data-bs-spy="scroll" data-bs-target="#menuNavbar" data-bs-offset="80" tabindex="0"&gt;
-
-    &lt;nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"&gt;
-        &lt;ul id="menuNavbar" class="navbar-nav ms-auto"&gt;
-            &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#seccion1"&gt;Sección 1&lt;/a&gt;&lt;/li&gt;
-            &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#seccion2"&gt;Sección 2&lt;/a&gt;&lt;/li&gt;
-            &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#seccion3"&gt;Sección 3&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/nav&gt;
-
-    &lt;section id="seccion1"&gt;...&lt;/section&gt;
-    &lt;section id="seccion2"&gt;...&lt;/section&gt;
-    &lt;section id="seccion3"&gt;...&lt;/section&gt;
-
-&lt;/body&gt;
-                                    </pre>
-
-
-                                    <h4 class="fw-bold mt-4">Comportamiento visual esperado</h4>
-                                    <p style="font-size: 1.05rem;">
-                                        A medida que el usuario se desplaza, Bootstrap <strong>detecta</strong>
-                                        automáticamente la sección visible
-                                        y agrega la clase <code>.active</code> al enlace correspondiente del navbar,
-                                        resaltándolo.
-                                        Esto guía visualmente al usuario y evita que se pierda dentro de la página.
-                                    </p>
-
-
-
-                                    <hr class="my-5">
-
-                                    <h3 class="text-primary fw-bold" style="font-size: 1.8rem;">
-                                        Scrollspy aplicado al componente LIST-GROUP
-                                    </h3>
+                                    <h4 class="text-secondary fw-bold">Aplicado al componente LIST-GROUP</h4>
 
                                     <p class="text-muted" style="font-size: 1.05rem;">
                                         Cuando Scrollspy se utiliza con el componente
@@ -289,95 +224,8 @@
                                         limpia y segmentada,
                                         ideal para menús laterales o paneles informativos.
                                     </p>
-
-
-                                    <h4 class="fw-bold mt-4">¿Qué lo diferencia?</h4>
-                                    <p style="font-size: 1.05rem;">
-                                        A diferencia del Scrollspy aplicado a un navbar, el uso con
-                                        <code>.list-group </code> permite
-                                        un diseño vertical más compacto, con divisiones visuales claras entre secciones.
-                                        Este enfoque es común en paneles laterales o interfaces tipo dashboard, donde la
-                                        navegación interna se mantiene fija mientras el contenido principal se desplaza.
-                                        Además, el estilo de Bootstrap resalta automáticamente el enlace activo mediante
-                                        el uso de las clases <code>.active</code> y
-                                        <code>.list-group-item-action</code>, sin necesidad de CSS
-                                        adicional.
-                                    </p>
-
-
-                                    <h4 class="fw-bold mt-4">Requisitos clave al usar Scrollspy con NAVBAR</h4>
-                                    <ul style="font-size: 1.05rem;">
-                                        <li>El contenedor desplazable (Por lo general un <code>&lt;div&gt;</code> o
-                                            <code>&lt;body&gt;</code>) debe tener los atributos
-                                            <code>data-bs-spy="scroll"</code> y <code>data-bs-target="#idLista"</code>.
-                                        </li>
-                                        <li>
-                                            El componente <code>.list-group</code> debe tener un <code>id</code> único,
-                                            que se usará como referencia desde <code>data-bs-target</code>.
-                                        </li>
-                                        <li>
-                                            Cada elemento de la lista (<code>&lt;a&gt;</code> o
-                                            <code>&lt;button&gt;</code>) debe apuntar a una sección con un id distinto
-                                            dentro del contenido.
-                                        </li>
-
-
-                                        <li>
-                                            Se recomienda usar <code>data-bs-offset</code> para ajustar el
-                                            comportamiento cuando se usan encabezados fijos.
-                                        </li>
-                                    </ul>
-
-
-                                    <h4 class="fw-bold mt-4">Ejemplo de configuración mínima</h4>
-
-                                    <pre class="p-3 rounded"
-                                        style="background:#000; color:#f8f8f2; white-space:pre; overflow:auto; font-size:14px;">
-&lt;div class="row"&gt;
-  &lt;!-- Lista lateral --&gt;
-  &lt;div class="col-4"&gt;
-    &lt;div id="menuLista" class="list-group"&gt;
-      &lt;a class="list-group-item list-group-item-action" href="#item1"&gt;Sección 1&lt;/a&gt;
-      &lt;a class="list-group-item list-group-item-action" href="#item2"&gt;Sección 2&lt;/a&gt;
-      &lt;a class="list-group-item list-group-item-action" href="#item3"&gt;Sección 3&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;!-- Contenido principal --&gt;
-  &lt;div class="col-8" data-bs-spy="scroll" data-bs-target="#menuLista" data-bs-offset="0" tabindex="0" style="height:300px; overflow-y:auto;"&gt;
-    &lt;h4 id="item1"&gt;Sección 1&lt;/h4&gt;
-    &lt;p&gt;Contenido de la primera sección...&lt;/p&gt;
-
-    &lt;h4 id="item2"&gt;Sección 2&lt;/h4&gt;
-    &lt;p&gt;Contenido de la segunda sección...&lt;/p&gt;
-
-    &lt;h4 id="item3"&gt;Sección 3&lt;/h4&gt;
-    &lt;p&gt;Contenido de la tercera sección...&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-                                    </pre>
-
-
-                                    <h4 class="fw-bold mt-4">Comportamiento visual esperado</h4>
-                                    <p style="font-size: 1.05rem;">
-                                        Mientras el usuario se desplaza dentro del contenedor con scroll,
-                                        <strong>Bootstrap
-                                            detecta automáticamente</strong> qué sección se encuentra visible en ese
-                                        momento.
-                                        El elemento correspondiente dentro de la list-group se marcará con la clase
-                                        <code>.active</code>, <strong>resaltándolo con un color distintivo</strong> y
-                                        proporcionando una referencia
-                                        visual clara de la posición actual.
-                                        Esto ofrece una experiencia de navegación fluida, intuitiva y perfectamente
-                                        integrada con el estilo visual de Bootstrap.
-                                    </p>
-
                                 </div>
-
-
                             </div>
-
-
                         </div>
 
                     </div>
@@ -388,10 +236,12 @@
                         <!-- Sección 2 -->
                         <div class="card shadow mb-4" id="parte2">
                             <div class="card-header py-3">
-                                <h4 class="m-0 fw-bold text-primary">2) Ejemplo tomado del video</h4>
+                                <h2 class="text-primary fw-bold" style="font-size: 1.8rem;">Video Demostrativo y Explicación</h2>
                             </div>
 
                             <div class="card-body">
+                                
+                                <h4 class="fw-bold mb-3">Video Demostrativo</h4>
 
                                 <!-- VIDEO CENTRADO -->
                                 <div class="video-container">
@@ -452,13 +302,11 @@
 
                     </div>
 
-                    <h1 class="h3 mb-4" id="parte3">3) Ejecución del código</h1>
-                    <!-- Ejemplo con NAVBAR dentro de un solo contenedor (una columna) -->
+                    <!-- PARTE 3 - EJEMPLOS PRÁCTICOS -->
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h5 class="m-0 font-weight-bold text-primary">Ejemplo en la barra de navegación → (Scrollspy
-                                aplicado al <code>navbar</code>)</h5>
+                            <h2 class="text-primary fw-bold" style="font-size: 1.8rem;"> Ejecución del Código Navbar</h2>
                         </div>
 
                         <div class="card-body">
@@ -531,15 +379,15 @@
                         </div>
                     </div>
 
+                    <!-- SECCIÓN 3 ejercicio 2 -->
+
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h5 class="m-0 font-weight-bold text-primary">Scrollspy usando list-group
-                            </h5>
+                            <h2 class="text-primary fw-bold" style="font-size: 1.8rem;"> Ejecución del Código list-group</h2>
                         </div>
 
                         <div class="card-body">
 
-                            <h3 style="color:#212529; font-weight:600;">Ejecución del código</h3>
                             <p>Pulsa <strong>Ejecutar</strong> para ver el Scrollspy con grupos de listas y
                                 desplazamiento dinámico.</p>
 
@@ -614,14 +462,15 @@
                     </div>
 
 
-                    <h1 class="h3 mb-4" id="parte3">4) Ejercicio de la Prueba</h1>
-                    <!-- SECCIÓN 4 -->
+                   <!-- SECCIÓN 4 -->
 
-                    <!-- === EXPLICACIÓN: Scrollspy usando NAVBAR (arriba del card de la demo) === -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h5 class="m-0 font-weight-bold text-primary">Ejemplo con NAVBAR — Explicación del código
-                            </h5>
+                            <h2 class="text-primary fw-bold" style="font-size: 1.8rem;">Ejercicio de la Prueba - Navbar</h2>
+                        </div>
+                        <br>
+                        <div class="card-body">
+                        <h4 class="fw-bold mb-3">Explicación</h4>
                         </div>
 
                         <div class="card-body" style="max-width:900px;margin:auto">
@@ -716,10 +565,11 @@
 
                         <!-- === CÓDIGO REAL DE parte4.html + BOTONES + IFRAME === -->
                         <hr class="my-4">
-
+                        <div class="card-body">
                         <h6 class="fw-bold">Código del Exámen</h6>
                         <p class="text-muted">Se muestra el archivo real. Puedes ejecutarlo en un iframe aquí mismo.</p>
-
+                        </div>
+                        
                         <pre id="codeParte4" class="code-dark"></pre>
 
                         <div class="mt-3 d-flex gap-2">
