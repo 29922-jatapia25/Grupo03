@@ -7,114 +7,16 @@ $(document).ready(function() {
     // })
 
 });
-
-document.addEventListener('DOMContentLoaded', function () {
-  const btn = document.getElementById('btn-ejecutar-scrollspy');
-  if (!btn) return;
-
-  btn.addEventListener('click', function () {
-    // 1) Verificar secciones existentes
-    const targets = ['#parte1', '#parte2', '#parte3', '#parte4'];
-    const missing = targets.filter(sel => !document.querySelector(sel));
-    if (missing.length) {
-      alert('No se encontraron las secciones: ' + missing.join(', '));
-      return;
-    }
-
-    // 2) Ubicar topbar y dropdown PARTES
-    const topbar = document.querySelector('.navbar.topbar, nav.navbar.topbar, .topbar.navbar');
-    if (!topbar) {
-      alert('No se encontró el topbar (.navbar.topbar).');
-      return;
-    }
-
-    const partesDropdown = topbar.querySelector('.nav-item.dropdown.no-arrow');
-    if (partesDropdown) partesDropdown.classList.add('d-none');
-
-    // 3) Si ya existe un menú temporal previo, reutilizar
-    let spyMenu = document.getElementById('scrollspy-topbar-menu');
-    if (!spyMenu) {
-      spyMenu = document.createElement('ul');
-      spyMenu.id = 'scrollspy-topbar-menu';
-      spyMenu.className = 'navbar-nav ms-auto scrollspy-topbar';
-      spyMenu.innerHTML = `
-        <li class="nav-item"><a class="nav-link" href="#parte1">1) Teoría</a></li>
-        <li class="nav-item"><a class="nav-link" href="#parte2">2) Ejemplo</a></li>
-        <li class="nav-item"><a class="nav-link" href="#parte3">3) Ejecución</a></li>
-        <li class="nav-item"><a class="nav-link" href="#parte4">4) Ejercicio</a></li>
-      `;
-      // Insertarlo al final del contenedor derecho del topbar
-      topbar.appendChild(spyMenu);
-    } else {
-      spyMenu.classList.remove('d-none');
-    }
-
-    // 4) Activar Scrollspy sobre el <body> (Bootstrap 5 o 4)
-    const OFFSET = 90; // compensa la altura de tu topbar
-    document.body.setAttribute('data-bs-spy', 'scroll');
-    document.body.setAttribute('data-bs-target', '#scrollspy-topbar-menu');
-    document.body.setAttribute('data-bs-offset', String(OFFSET));
-    document.body.setAttribute('tabindex', '0'); // necesario si fuera contenedor scrolleable
-
-    // Limpia instancias previas (v5)
-    if (window.bootstrap && window.bootstrap.ScrollSpy) {
-      const prev = window.bootstrap.ScrollSpy.getInstance(document.body);
-      if (prev) prev.dispose();
-      new window.bootstrap.ScrollSpy(document.body, {
-        target: '#scrollspy-topbar-menu',
-        offset: OFFSET
-      });
-    } else if (window.jQuery && typeof jQuery.fn.scrollspy === 'function') {
-      // Bootstrap 4 (jQuery)
-      jQuery('body').scrollspy('dispose');
-      jQuery('body').scrollspy({ target: '#scrollspy-topbar-menu', offset: OFFSET });
-    } else {
-      console.warn('Bootstrap ScrollSpy no está disponible.');
-    }
-
-    // 5) Scroll amable hacia el inicio de la parte 3 para que se note
-    const p3 = document.getElementById('parte3');
-    if (p3) {
-      const y = p3.getBoundingClientRect().top + window.scrollY - (OFFSET + 10);
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const pre = document.getElementById("code-scrollspy");
-  if (!pre) return;
-
-  // 1) Obtener texto real sin afectar entidades HTML (&lt;, &gt;)
-  let lines = pre.innerHTML.split("\n");
-
-  // 2) Borrar líneas vacías del principio y el final
-  while (lines.length && lines[0].trim() === "") lines.shift();
-  while (lines.length && lines[lines.length - 1].trim() === "") lines.pop();
-
-  // 3) Detectar indentación común mínima
-  let minIndent = Math.min(
-    ...lines
-      .filter(l => l.trim().length > 0)
-      .map(l => l.match(/^(\s*)/)[0].length)
-  );
-
-  // 4) Quitar esa indentación a todas las líneas
-  lines = lines.map(l => l.slice(minIndent));
-
-  // 5) Reemplazar el contenido sin dañarlo
-  pre.innerHTML = lines.join("\n");
-});
-
-// ===== Parte 3: Scrollspy usando NAVBAR (una columna) =====
+// Código para el recuadro de "Ejecutar código" en la navbar
 (function () {
   const pre   = document.getElementById('codeBoxNavbar');
   const run   = document.getElementById('runCodeNavbar');
   const reset = document.getElementById('resetCodeNavbar');
+  const frame = document.getElementById('resultFrameNavbar');
   const box   = document.getElementById('resultBoxNavbar');
-  if (!pre || !run || !reset || !box) return;
+  if (!pre || !run || !reset || !frame || !box) return;
 
-  // Limpia indentación del <pre> para que el HTML salga bien
+  // Limpia indentación del <pre>
   const normalizePre = (p) => {
     const raw = p.textContent.split('\n');
     while (raw.length && raw[0].trim() === '') raw.shift();
@@ -124,39 +26,33 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   normalizePre(pre);
 
+  // Ejecutar
   run.addEventListener('click', () => {
-    // Inyecta el HTML del demo
-    const html = pre.textContent.replace(/&lt;/g, '<').replace(/&gt;/g, '>');
-    box.innerHTML = html;
+    box.style.display = 'block'; // mostrar el recuadro
 
-    // Inicializa ScrollSpy según la versión de Bootstrap
-    const area = box.querySelector('#demo-scroll-area');
+    let html = pre.textContent.replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+    const base = document.baseURI; // ruta base de tu sitio (por ejemplo http://localhost:5500/)
 
-    // Si es Bootstrap 5
-    if (window.bootstrap && window.bootstrap.ScrollSpy) {
-      const prev = window.bootstrap.ScrollSpy.getInstance(area);
-      if (prev) prev.dispose();
-      new window.bootstrap.ScrollSpy(area, { target: '#demo-navbar-menu', offset: 60 });
-    } else if (window.jQuery && typeof jQuery.fn.scrollspy === 'function') {
-      // Bootstrap 4 (jQuery)
-      jQuery(area).scrollspy({ target: '#demo-navbar-menu', offset: 60 });
+    // Inserta <base> para que las rutas relativas funcionen dentro del iframe
+    if (html.includes('<head>')) {
+      html = html.replace('<head>', `<head>\n  <base href="${base}">`);
+    } else {
+      html = html.replace('<html', `<html data-base="${base}"`);
+      html = html.replace('<body', `<head><base href="${base}"></head>\n<body`);
     }
 
-    // Navegación suave (no deja que el enlace haga scroll del body)
-    box.querySelectorAll('#demo-navbar-menu a.nav-link').forEach(a => {
-      a.addEventListener('click', (e) => {
-        e.preventDefault();
-        const id = a.getAttribute('href');
-        const target = box.querySelector(id);
-        if (!target) return;
-        const top = target.offsetTop - 10;
-        area.scrollTo({ top, behavior: 'smooth' });
-      });
-    });
-
-    // Fuerza cálculo inicial
-    area.dispatchEvent(new Event('scroll'));
+    const doc = frame.contentWindow.document;
+    doc.open();
+    doc.write(html);
+    doc.close();
   });
 
-  reset.addEventListener('click', () => box.innerHTML = '');
+  // Resetear
+  reset.addEventListener('click', () => {
+    box.style.display = 'none'; // ocultar el recuadro
+    const doc = frame.contentWindow.document;
+    doc.open();
+    doc.write('<!doctype html><html><head><meta charset="utf-8"></head><body></body></html>');
+    doc.close();
+  });
 })();
