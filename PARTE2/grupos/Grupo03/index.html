@@ -601,9 +601,6 @@
                     </div>
 
 
-
-
-
                     <div class="card shadow mb-4" id="parte4">
                         <div class="card shadow mb-4" id="parte4">
                             <div class="card-header py-3">
@@ -710,8 +707,6 @@
                             <hr>
                             <hr class="my-4.2">
 
-                            
-
                             <div class="card-body">
                                 <h6 class="fw-bold">Código del exámen</h6>
                                 <p class="text-muted">Se muestra el archivo real. Puedes ejecutarlo en un iframe aquí mismo.</p>
@@ -732,15 +727,9 @@
 
                         </div>
 
-
-
-
                     </div>
-
-
                 </div>
             </div>
-
         </div>
 
         <!-- Scripts -->
@@ -750,199 +739,6 @@
         <script src="../../js/sb-admin-2.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
         <script src="js/main.js"></script>
-
-        <!-- SCRIPT CORREGIDO PARA SCROLLSPY CON LIST-GROUP -->
-        <script>
-            $(document).ready(function () {
-
-                $("#runCode2").click(function () {
-                    const code = $("#codeBox2").text().replace(/&lt;/g, "<").replace(/&gt;/g, ">");
-                    $("#resultBox2").html(code);
-
-                    // Esperar a que el DOM esté completamente listo
-                    setTimeout(function () {
-                        configurarScrollspy();
-                    }, 300);
-                });
-
-                $("#resetCode2").click(function () {
-                    $("#resultBox2").fadeOut(400, function () {
-                        $(this).html("").fadeIn();
-                    });
-                });
-
-                function configurarScrollspy() {
-                    const resultBox = document.getElementById('resultBox2');
-                    if (!resultBox) return;
-
-                    const scrollContainer = resultBox.querySelector('#scrollspy-demo');
-                    const listGroup = resultBox.querySelector('#list-example-demo');
-
-                    if (!scrollContainer || !listGroup) {
-                        console.error('No se encontraron los elementos necesarios');
-                        console.log('scrollContainer:', scrollContainer);
-                        console.log('listGroup:', listGroup);
-                        return;
-                    }
-
-                    // Obtener todas las referencias de los enlaces
-                    const links = listGroup.querySelectorAll('a.list-group-item');
-                    const sections = {};
-
-                    links.forEach(link => {
-                        const href = link.getAttribute('href');
-                        const id = href.substring(1);
-                        const element = scrollContainer.querySelector(href);
-                        if (element) {
-                            sections[id] = { link: link, element: element };
-                        }
-                    });
-
-                    console.log('Secciones encontradas:', Object.keys(sections));
-
-                    // Función para actualizar el estado activo
-                    function updateActiveLink() {
-                        let closestSection = null;
-                        let closestDistance = Infinity;
-
-                        Object.keys(sections).forEach(id => {
-                            const section = sections[id];
-                            const rect = section.element.getBoundingClientRect();
-                            const containerRect = scrollContainer.getBoundingClientRect();
-
-                            // Calcular la distancia desde el top del contenedor
-                            const distance = Math.abs(rect.top - containerRect.top - 50);
-
-                            // Verificar si está en el viewport y es el más cercano
-                            if (rect.top < containerRect.bottom && rect.bottom > containerRect.top) {
-                                if (distance < closestDistance) {
-                                    closestDistance = distance;
-                                    closestSection = id;
-                                }
-                            }
-                        });
-
-                        // Remover active de todos
-                        links.forEach(link => {
-                            link.classList.remove('active');
-                            link.style.backgroundColor = '#e9f0f8';
-                            link.style.color = '#003366';
-                            link.style.fontWeight = 'normal';
-                            link.style.borderLeft = 'none';
-                        });
-
-                        // Agregar active al más cercano
-                        if (closestSection && sections[closestSection]) {
-                            const activeLink = sections[closestSection].link;
-                            activeLink.classList.add('active');
-                            activeLink.style.backgroundColor = '#003366';
-                            activeLink.style.color = '#ffffff';
-                            activeLink.style.fontWeight = 'bold';
-                            activeLink.style.borderLeft = '4px solid #0056b3';
-                        }
-                    }
-
-                    // Event listener para scroll
-                    scrollContainer.addEventListener('scroll', updateActiveLink);
-
-                    // Llamar una vez al inicio
-                    updateActiveLink();
-
-                    // Event listeners para los clics en los enlaces
-                    links.forEach(link => {
-                        link.addEventListener('click', function (e) {
-                            e.preventDefault();
-                            const href = this.getAttribute('href');
-                            const target = scrollContainer.querySelector(href);
-
-                            if (target) {
-                                // Scroll suave hacia el elemento
-                                const offsetTop = target.offsetTop - 20;
-                                scrollContainer.scrollTo({
-                                    top: offsetTop,
-                                    behavior: 'smooth'
-                                });
-
-                                // Actualizar active después del scroll
-                                setTimeout(updateActiveLink, 100);
-                            }
-                        });
-                    });
-                }
-            });
-        </script>
-
-        <script>
-            // Cargar el código real de parte4.html y pintarlo en el <pre>
-            (function () {
-                const pre = document.getElementById('codeParte4');
-                if (!pre) return;
-
-                fetch('parte4.html', { cache: 'no-store' })
-                    .then(r => r.ok ? r.text() : Promise.reject('No se pudo leer parte4.html'))
-                    .then(txt => {
-                        // Mostrar el código TAL CUAL, sin escapar nada
-                        pre.textContent = txt;
-                    })
-                    .catch(err => {
-                        pre.textContent = 'Error cargando parte4.html: ' + err;
-                    });
-            })();
-
-            // Botones Ejecutar / Descartar
-            (function () {
-                const btnRun = document.getElementById('btnRunParte4');
-                const btnDiscard = document.getElementById('btnDiscardParte4');
-                const iframe = document.getElementById('iframeParte4');
-
-                btnRun.addEventListener('click', function () {
-                    iframe.src = 'parte4.html';
-                    iframe.style.display = 'block';
-                });
-
-                btnDiscard.addEventListener('click', function () {
-                    iframe.style.display = 'none';
-                    iframe.src = '';
-                });
-            })();
-        </script>
-        <script>
-            // Cargar el código real de parte4.html
-            (function () {
-                const pre = document.getElementById('codeParte4.2');
-                if (!pre) return;
-
-                fetch('Parte4.2.html', { cache: 'no-store' })
-                    .then(r => r.ok ? r.text() : Promise.reject('No se pudo leer parte4.2.html'))
-                    .then(txt => {
-                        // Mostrar el código TAL CUAL, sin escapar nada
-                        pre.textContent = txt;
-                    })
-                    .catch(err => {
-                        pre.textContent = 'Error cargando Parte4.2.html: ' + err;
-                    });
-            })();
-
-            // Botones Ejecutar / Descartar
-            (function () {
-                const btnRun = document.getElementById('btnRunParte4.2');
-                const btnDiscard = document.getElementById('btnDiscardParte4.2');
-                const iframe = document.getElementById('iframeParte4.2');
-
-                btnRun.addEventListener('click', function () {
-                    iframe.src = 'Parte4.2.html';
-                    iframe.style.display = 'block';
-                });
-
-                btnDiscard.addEventListener('click', function () {
-                    iframe.style.display = 'none';
-                    iframe.src = '';
-                });
-            })();
-        </script>
-
-
-
 
 </body>
 
